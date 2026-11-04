@@ -61,7 +61,16 @@ The Pipedrive field-definition snapshot in `integration_events` provides authent
 
 ## Cloudflare Pages
 
-Project: `bizbase`. Build command: `npm run build`. Output directory: `dist`. The existing preview branch is `codex/cloudflare-frontend` and its stable alias is `https://codex-cloudflare-frontend.bizbase.pages.dev`.
+**Live app: https://bizbase.pages.dev** (production, deployed from `main`).
+
+Project: `bizbase`, direct upload (not connected to GitHub, so pushing does not deploy). Build command: `npm run build`. Output directory: `dist`. Deploy from a clean build:
+
+```sh
+rm -rf dist && npm run build
+npx wrangler pages deploy dist --project-name bizbase --branch main
+```
+
+The old preview alias `https://codex-cloudflare-frontend.bizbase.pages.dev` (branch `codex/cloudflare-frontend`) was updated to the same build on 4 November 2026. Use the live address above instead.
 
 Preview URLs are public; Supabase staff authentication gates all CRM data. Production and preview currently use the same authenticated workspace, so normal UI writes affect the shared BizBase data. Use a separate Supabase project before testing destructive or speculative migrations.
 
