@@ -34,8 +34,9 @@ export const TABLE_CONTROLS:Record<TableName,TableControls> = {
  },
  opportunities:{
   columns:['name','received_on','added_on','account_id','primary_contact_id','contact_email','contact_phone','proposed_services','deal_type','stage','amount','probability','expected_close','next_activity','owner_id','lost_reason','acquisition_channel','company_industry','notes','source_system'],
-  filter:['stage','owner_id','proposed_services','deal_type','acquisition_channel','company_industry','company_revenue_band','probability','expected_close','next_activity','lost_reason','source_system','received_on','added_on'],
-  group:['stage','owner_id','proposed_services','deal_type','acquisition_channel','company_industry','company_revenue_band','lost_reason'],
+  // Company stays a filter/grouping: the Deals "By company" button depends on it.
+  filter:['stage','owner_id','account_id','proposed_services','deal_type','acquisition_channel','company_industry','company_revenue_band','probability','expected_close','next_activity','lost_reason','source_system','received_on','added_on'],
+  group:['stage','owner_id','account_id','proposed_services','deal_type','acquisition_channel','company_industry','company_revenue_band','lost_reason'],
  },
  intake_leads:{
   columns:['lead_title','submitted_at','account_id','contact_id','submission_contact','submission_email','submission_phone','contact_email','contact_phone','owner_id','journey_status','acquisition_channel','source_form','source_system','history_scan_status','finstat_status','submission_message','company_industry','event_ids',...responses(intakeResponseColumns)],

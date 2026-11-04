@@ -18,7 +18,7 @@ The field review that ran from 21 October to 4 November is **closed**. Its decis
 
 - **Contacts:** Company and Job title are no longer Group-by options. The default grouping is now Company lead status. Email, Phone and Last name can be filtered. The Company ID column was added. Company size and Revenue range columns were removed (Revenue range is still a filter and grouping).
 - **Companies:** Company ID column added. Website, Invoice email and Company size are now card only. *Form received on* removed.
-- **Deals:** Company filter and grouping, Contact filter and Deal value filter removed (your sheet). Lost reason can be grouped. Deal labels retired. *Forecast · EUR* is renamed *Deal value · EUR*.
+- **Deals:** Contact filter and Deal value filter removed (your sheet). Company stays as a filter and grouping even though the sheet removed it, because the **By company** button needs it (found while checking the app). Lost reason can be grouped. Deal labels retired. *Forecast · EUR* is renamed *Deal value · EUR*.
 - **Projects:** Revenue plan, Vendor budget, Deal, Data quality and the Company lead status / lifecycle columns removed. Contact phone added. Contact and Deal can be filtered. Contract value is no longer a filter.
 - **Event history:** Registrant name, email, phone, reported company, attendance, sales interest and review status now come from the linked Contact. Detailed answers (offering, competitors, brand, takeaway, website, source detail) are columns.
 - **Retired everywhere:** First email sent, Interest, Full report requested, Event period, Vendor expected/invoice dates, Service default group.

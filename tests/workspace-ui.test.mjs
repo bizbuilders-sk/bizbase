@@ -223,6 +223,8 @@ test('grouping choices are business categories while filters retain useful range
   assert.ok(!tableFilterFields('accounts').some(field=>field.key==='contacts_count'));
   assert.ok(groupFields('opportunities').some(field=>field.key==='proposed_services'));
   assert.ok(!groupFields('opportunities').some(field=>field.key==='deal_labels'),'Deal labels retired on 4 Nov 2026');
+  assert.ok(groupFields('opportunities').some(field=>field.key==='account_id'),'the Deals "By company" button groups the list by Company');
+  assert.equal(restoreView({view:'list',listGroupBy:'account_id'},'opportunities').listGroupBy,'account_id');
 });
 test('saved views discard retired filter/group fields without losing columns, sorting or valid conditions', () => {
   const filters=[{id:'old',field:'finstat_url',operator:'contains',value:'finstat'},{id:'keep',field:'kind',operator:'eq',value:'Client'}];
