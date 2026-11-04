@@ -61,6 +61,8 @@ Everyone's saved column layout was reset to these defaults once. Filters, sortin
 - **Company:** Company → Facts → *Names* → *Record info*
 - **Contact:** one section (name, job title, company, email, phone)
 
+**Card tabs:** the Enquiries and Imported fields tabs are removed from every card. Nearly all enquiries duplicate Event history, and the original ClickUp/Pipedrive snapshots stay in the database. Typical tabs are now Company: Details, Contacts, Deals, Projects, Event history, Notes; Contact: Details, Company, Deals, Projects, Event history, Notes.
+
 **Lists inside a card** (e.g. a Contact's Deals) always open unfiltered, so the card's counts and its lists agree. The main Deals screen still opens on Open deals.
 
 **To change any of this,** edit `TABLE_CONTROLS` (`columns` order and `visible`) or `CARD_LAYOUT` in `src/table-field-policy.ts`. To push a new default column order to everyone's saved layouts, bump `LAYOUT_VERSION` in `src/workspace-model.ts`.
