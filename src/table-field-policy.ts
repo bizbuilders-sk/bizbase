@@ -14,7 +14,7 @@ const responseGroups = ['follow_up','response_heard_about','response_audit_reque
 const intakeResponseColumns = [...responseColumns,'response_competition_entered','response_lead_form'];
 const intakeResponseFilters = [...responseFilters,'response_competition_entered','response_lead_form'];
 const intakeResponseGroups = [...responseGroups,'response_competition_entered','response_lead_form'];
-// The same responses inside Event history (one row per registration).
+// The same responses inside the Webform submissions tab (one row per submission).
 const registrationColumns = ['follow_up','response_follow_up_notes','response_dc_notes','response_audit_requested','response_consultation_requested','response_heard_about','response_offering','response_competitors','response_audit_brand','response_takeaway_goal','response_competition_entered','response_source_detail','response_reported_website','response_lead_form','registered_at'];
 const registrationFilters = ['follow_up','response_audit_requested','response_consultation_requested','response_heard_about','response_source_detail','response_lead_form'];
 const registrationGroups = ['follow_up','response_heard_about','response_source_detail','response_lead_form'];

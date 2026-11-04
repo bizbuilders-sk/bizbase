@@ -20,7 +20,7 @@ The field review that ran from 21 October to 4 November is **closed**. Its decis
 - **Companies:** Company ID column added. Website, Invoice email and Company size are now card only. *Form received on* removed.
 - **Deals:** Contact filter and Deal value filter removed (your sheet). Company stays as a filter and grouping even though the sheet removed it, because the **By company** button needs it (found while checking the app). Lost reason can be grouped. Deal labels retired. *Forecast · EUR* is renamed *Deal value · EUR*.
 - **Projects:** Revenue plan, Vendor budget, Deal, Data quality and the Company lead status / lifecycle columns removed. Contact phone added. Contact and Deal can be filtered. Contract value is no longer a filter.
-- **Event history:** Registrant name, email, phone, reported company, attendance, sales interest and review status now come from the linked Contact. Detailed answers (offering, competitors, brand, takeaway, website, source detail) are columns.
+- **Webform submissions tab** (called Event history until 4 Nov 2026): Registrant name, email, phone, reported company, attendance, sales interest and review status now come from the linked Contact. Detailed answers (offering, competitors, brand, takeaway, website, source detail) are columns.
 - **Retired everywhere:** First email sent, Interest, Full report requested, Event period, Vendor expected/invoice dates, Service default group.
 - **Renamed:** Company registration no. → *Company ID*; Marketing follow-up → *Sales follow-up*; Discovery channel → *How they heard about us*; Reported source → *Source detail*; Registered on → *Form received on*.
 
@@ -61,7 +61,7 @@ Everyone's saved column layout was reset to these defaults once. Filters, sortin
 - **Company:** Company → Facts → *Names* → *Record info*
 - **Contact:** one section (name, job title, company, email, phone)
 
-**Card tabs:** the Enquiries and Imported fields tabs are removed from every card. Nearly all enquiries duplicate Event history, and the original ClickUp/Pipedrive snapshots stay in the database. Typical tabs are now Company: Details, Contacts, Deals, Projects, Event history, Notes; Contact: Details, Company, Deals, Projects, Event history, Notes.
+**Card tabs:** the Enquiries and Imported fields tabs are removed from every card. Nearly all enquiries duplicate a webform submission, and the original ClickUp/Pipedrive snapshots stay in the database. Typical tabs are now Company: Details, Contacts, Deals, Projects, Webform submissions, Notes; Contact: Details, Company, Deals, Projects, Webform submissions, Notes. The Webform submissions tab (formerly Event history) holds every form submission: event/webinar registrations with their answers, plus standalone contact-form messages listed below them.
 
 **Lists inside a card** (e.g. a Contact's Deals) always open unfiltered, so the card's counts and its lists agree. The main Deals screen still opens on Open deals.
 

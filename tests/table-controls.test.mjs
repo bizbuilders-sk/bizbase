@@ -25,7 +25,7 @@ test('every table has a consistent explicit component catalogue rather than all 
   assert.ok(tableColumnFields(table).some(f=>(f.registrationKey||f.key)==='response_follow_up_notes'));
   assert.ok(!tableColumnFields(table).some(f=>/response_(quantity|source_total_price|source_item_price|source_month|learned|address|registration_number|first_email_sent|interest|full_report_requested)$/.test(f.key)));
  }
- // Detailed form answers show in Event history, not as Company/Contact columns.
+ // Detailed form answers show in the Webform submissions tab, not as Company/Contact columns.
  for(const table of ['accounts','contacts'])assert.ok(!tableColumnFields(table).some(f=>/response_(competitors|reported_website|competition_entered|lead_form)$/.test(f.key)));
  assert.ok(['response_competitors','response_reported_website','response_source_detail'].every(key=>tableColumnFields('event_participations').some(f=>f.key===key)));
 });
