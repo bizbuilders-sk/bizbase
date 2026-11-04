@@ -7,11 +7,13 @@ test('Company review decisions remove fields and filter-only revenue range survi
  const removed=['contacts_count','qualification_status','qualification_score','qualification_notes','source','source_system','acquisition_channel','data_quality_status'];
  assert.ok(removed.every(key=>!DEFINITIONS.accounts.fields.some(f=>f.key===key)));
  const columns=tableColumnFields('accounts').map(f=>f.key),filters=tableFilterFields('accounts').map(f=>f.key);
- assert.ok(!columns.some(key=>['added_on','finstat_url','registration_number','address','revenue_band'].includes(key)));
+ // 4 Nov 2026 field review: Company ID is a column; size, website and address are Company card only.
+ assert.ok(!columns.some(key=>['added_on','finstat_url','address','revenue_band','company_size','website'].includes(key)));
+ assert.ok(columns.includes('registration_number'));
  assert.ok(DEFINITIONS.accounts.fields.some(f=>f.key==='finstat_url'));
+ assert.ok(DEFINITIONS.accounts.fields.some(f=>f.key==='company_size'),'card-only fields stay on the record');
  assert.ok(!filters.includes('received_on')&&filters.includes('revenue_band'));
  assert.ok(groupFields('accounts').some(f=>f.key==='revenue_band'));
- assert.equal(tableColumnFields('accounts').find(f=>f.key==='company_size').groupSection,'TBD');
  const saved=restoreView({visibleKeys:['name','contacts_count','added_on'],filters:[{id:'revenue',field:'revenue_band',operator:'eq',value:'1 000 000 +'},{id:'old',field:'qualification_status',operator:'eq',value:'Qualified'}],groupBy:'revenue_band'},'accounts');
  assert.deepEqual(saved.visibleKeys,['name']);assert.deepEqual(saved.filters.map(f=>f.id),['revenue']);assert.equal(saved.groupBy,'revenue_band');
 });
@@ -37,7 +39,7 @@ test('Contact Email and Phone preserve every imported value without duplicate so
  assert.deepEqual(contactDetails(data,contact,'phone'),['+421900123456','+421900999000']);
  const defs=structuredClone(DEFINITIONS);extendSourceFields(defs,built.fields);
  assert.ok(!defs.contacts.fields.some(f=>f.sourceParameter));
- assert.ok(!tableFilterFields('contacts').some(f=>['email','phone'].includes(f.key)));
+ assert.ok(['email','phone'].every(key=>tableFilterFields('contacts').some(f=>f.key===key)),'Email and Phone can be filtered (e.g. empty / not empty)');
  assert.deepEqual(recordPatch('contacts',{...contact,first_name:'Person'},contact),{first_name:'Person'});
  assert.deepEqual(raw,source);
 });
@@ -48,8 +50,10 @@ test('client and vendor Invoice email share one field and old layout keys migrat
  const built=buildSourceParameters(records,{}),data={crm_source_parameters:built.records};
  assert.deepEqual(relatedFieldValue(data,{id:'company'},DEFINITIONS.accounts.fields.find(f=>f.key==='invoice_emails')),['billing@company.test','vendor@company.test']);
  const defs=structuredClone(DEFINITIONS);extendSourceFields(defs,built.fields);assert.ok(!defs.accounts.fields.some(f=>f.sourceName==='Invoice email'));
+ // Invoice email is Company card only since the 4 Nov 2026 field review, so old layout keys are dropped.
+ assert.ok(!tableColumnFields('accounts').some(f=>f.key==='invoice_emails'));
  const pref=restoreView({visibleKeys:[`src__ClickUp:901515197551__${key}`,`src__ClickUp:901515191148__${key}`]},'accounts');
- assert.deepEqual(pref.visibleKeys,['invoice_emails']);
+ assert.ok(!pref.visibleKeys.some(k=>k==='invoice_emails'||k.startsWith('src__')),'falls back to the default columns');
 });
 
 test('Deal terminology preserves separate sales and delivery relationships',()=>{

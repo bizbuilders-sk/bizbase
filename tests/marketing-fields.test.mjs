@@ -19,7 +19,7 @@ test('source responses retain separate notes, explicit checkbox states, and unkn
 });
 const lead={id:'lead',account_id:'company',contact_id:'person',marketing_fields:{}};
 const person={id:'person',account_id:'company'};
-const a={id:'a',event_id:'oct',account_id:'company',contact_id:'person',intake_lead_id:'lead',follow_up:'MB rieši',marketing_fields:{first_email_sent:false,follow_up_notes:'October only'}};
+const a={id:'a',event_id:'oct',account_id:'company',contact_id:'person',intake_lead_id:'lead',follow_up:'MB rieši',marketing_fields:{first_email_sent:false,audit_requested:false,follow_up_notes:'October only'}};
 const b={id:'b',event_id:'sep',account_id:'company',contact_id:'person',follow_up:'Neoslovujeme',marketing_fields:{first_email_sent:true,follow_up_notes:'September only'}};
 const data={accounts:[{id:'company'}],contacts:[person],intake_leads:[lead],event_participations:[a,b]};
 test('account, contact and intake projections refer to the same registration and retain event scope',()=>{
@@ -43,7 +43,8 @@ test('grouping choices exclude only unassigned fields and respect the selected r
   const choices=eventId=>availableGroupFields('accounts',[company],(row,field)=>field.registrationKey?marketingValues(withSurvey,'accounts',row,field.registrationKey,eventId):fieldValue(row,field),eventId).map(field=>field.key);
   const october=choices('oct');
   assert.ok(october.includes('marketing_follow_up'));
-  assert.ok(october.includes('marketing_response_first_email_sent'),'populated flags are available as advanced groups');
+  assert.ok(october.includes('marketing_response_audit_requested'),'populated flags are available as advanced groups');
+  assert.ok(!october.includes('marketing_response_first_email_sent'),'retired on 4 Nov 2026 even when populated');
   assert.ok(!october.includes('marketing_response_consultation_requested'));
   assert.ok(!october.includes('marketing_response_lead_form'));
   assert.ok(choices('survey').includes('marketing_response_consultation_requested'),'explicit No remains a real grouping value');
@@ -55,9 +56,9 @@ test('grouping availability retains a single real value, false and zero while re
   assert.deepEqual(availableGroupFields('accounts',rows).map(field=>field.key),['lifecycle']);
   const read=(_row,field)=>field.key==='lifecycle'?0:field.key==='industry'?false:field.key==='source'?['',null,' ']:[];
   assert.deepEqual(availableGroupFields('accounts',rows,read).map(field=>field.key),['lifecycle','industry']);
-  const pref=restoreView({listGroupBy:'company_size',groupBy:'company_size'},'accounts');
+  const pref=restoreView({listGroupBy:'revenue_band',groupBy:'revenue_band'},'accounts');
   availableGroupFields('accounts',rows);
-  assert.equal(pref.listGroupBy,'company_size','availability must not erase saved layout preferences');
+  assert.equal(pref.listGroupBy,'revenue_band','availability must not erase saved layout preferences');
 });
 test('follow-up writes preserve sibling values and use optimistic concurrency, without changing the account or source',async()=>{
   let table,patch,predicates=[];

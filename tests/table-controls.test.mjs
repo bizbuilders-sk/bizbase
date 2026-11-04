@@ -16,13 +16,18 @@ test('every table has a consistent explicit component catalogue rather than all 
   assert.ok(!groups.some(f=>['date','number','email','textarea'].includes(f.type)),`${table}: no lanes for notes, exact dates or money`);
   assert.ok(!columns.some(f=>['sort_order','agreement_id','vendor_id','source'].includes(f.key)),`${table}: no internal order, unresolved links or duplicate provenance`);
  }
- assert.ok(tableColumnFields('projects').some(f=>f.key==='planned_cost'));
- assert.ok(!tableColumnFields('projects').some(f=>f.registrationScope||f.linked&&!['contact_email','company_lead_status','company_lifecycle'].includes(f.key))); 
+ // Revenue plan / vendor budget totals are Project card only (4 Nov 2026); the values still exist.
+ assert.ok(!tableColumnFields('projects').some(f=>['planned_revenue','planned_cost'].includes(f.key)));
+ assert.ok(DEFINITIONS.projects.fields.some(f=>f.key==='planned_cost'));
+ assert.ok(!tableColumnFields('projects').some(f=>f.registrationScope||f.linked&&!['contact_email','contact_phone'].includes(f.key)));
  for(const table of ['opportunities','intake_leads'])assert.ok(!tableColumnFields(table).some(f=>['company_address','company_registration_number','company_lifecycle','company_roles'].includes(f.key)));
  for(const table of ['accounts','contacts','intake_leads','event_participations']){
   assert.ok(tableColumnFields(table).some(f=>(f.registrationKey||f.key)==='response_follow_up_notes'));
-  assert.ok(!tableColumnFields(table).some(f=>/response_(quantity|source_total_price|source_item_price|source_month|competitors|learned|reported_website|address|registration_number)$/.test(f.key)));
+  assert.ok(!tableColumnFields(table).some(f=>/response_(quantity|source_total_price|source_item_price|source_month|learned|address|registration_number|first_email_sent|interest|full_report_requested)$/.test(f.key)));
  }
+ // Detailed form answers show in Event history, not as Company/Contact columns.
+ for(const table of ['accounts','contacts'])assert.ok(!tableColumnFields(table).some(f=>/response_(competitors|reported_website|competition_entered|lead_form)$/.test(f.key)));
+ assert.ok(['response_competitors','response_reported_website','response_source_detail'].every(key=>tableColumnFields('event_participations').some(f=>f.key===key)));
 });
 
 test('parent relationships are removed from columns, filters and grouping inside related tables',()=>{
@@ -32,7 +37,7 @@ test('parent relationships are removed from columns, filters and grouping inside
   assert.ok(!saved.visibleKeys.includes(key));assert.ok(!saved.columnOrder.includes(key));
   assert.equal(saved.filters.length,0);assert.equal(saved.listGroupBy,'');assert.notEqual(saved.groupBy,key);
  }
- assert.equal(restoreView(null,'event_participations',{},'event_id').groupBy,'participation_status');
+ assert.equal(restoreView(null,'event_participations',{},'event_id').groupBy,'follow_up');
  assert.equal(restoreView({eventId:'unrelated-event'},'event_participations',{},'event_id').eventId,'','a hidden Event context cannot exclude the fixed parent event');
 });
 

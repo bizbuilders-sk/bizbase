@@ -36,8 +36,9 @@ test('account grouping is company-focused and exposes event follow-up only in a 
   const all=availableGroupFields('accounts',rows,read);
   assert.deepEqual(all.map(f=>f.label),['Lifecycle','Business roles','Event']);
   const event=availableGroupFields('accounts',rows,read,'event');
-  assert.deepEqual(event.filter(f=>!f.key.startsWith('marketing_response_')||f.key==='marketing_response_heard_about').map(f=>f.label),['Lifecycle','Business roles','Marketing follow-up','Discovery channel']);
-  assert.ok(event.some(f=>f.label==='First email sent'&&f.groupSection==='Event follow-up'));
+  assert.deepEqual(event.filter(f=>!f.key.startsWith('marketing_response_')||f.key==='marketing_response_heard_about').map(f=>f.label),['Lifecycle','Business roles','Sales follow-up','How they heard about us']);
+  assert.ok(event.some(f=>f.label==='Free audit requested'&&f.groupSection==='Event follow-up'));
+  assert.ok(!event.some(f=>f.label==='First email sent'),'retired on 4 Nov 2026');
   assert.ok(event.every(f=>['Company','Event','Event follow-up'].includes(f.groupSection)));
 });
 

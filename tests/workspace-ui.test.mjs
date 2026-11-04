@@ -37,7 +37,7 @@ test('hidden columns stay hidden, all-hidden layouts persist, and old company ke
   assert.equal(restoreView(JSON.parse(JSON.stringify(hidden)),'projects').visibleKeys.includes('end_date'),false);
   assert.deepEqual(restoreView({...pref,visibleKeys:[]},'projects').visibleKeys,[]);
   assert.deepEqual(restoreView({visibleKeys:['first_name','account_name']},'contacts').visibleKeys,['first_name','account_id']);
-  assert.equal(restoreView({groupBy:'notes'},'contacts').groupBy,'account_id');
+  assert.equal(restoreView({groupBy:'notes'},'contacts').groupBy,'company_lead_status');
 });
 test('switching child tables cannot reuse an unsupported grouping field', () => {
   assert.equal(groupingField('vendor_costs','service_id').key,'status');
@@ -216,23 +216,23 @@ test('grouping choices are business categories while filters retain useful range
     assert.equal(groups.some(field=>field.key===DEFINITIONS[table].groupBy),true);
     assert.equal(groups.every(field=>filters.some(filter=>filter.key===field.key)),true);
   }
-  assert.deepEqual(keys(groupFields('projects').filter(f=>!f.groupSection?.startsWith('Advanced'))),['status','project_group','owner_id','account_id','data_quality_status']);
-  assert.ok(tableFilterFields('projects').some(field=>field.key==='contract_value'));
+  assert.deepEqual(keys(groupFields('projects').filter(f=>!f.groupSection?.startsWith('Advanced'))),['status','project_group','owner_id','account_id']);
+  assert.ok(!tableFilterFields('projects').some(field=>field.key==='contract_value'));
   assert.ok(tableFilterFields('projects').some(field=>field.key==='end_date'));
-  assert.ok(!tableFilterFields('contacts').some(field=>field.key==='email'));
+  assert.ok(tableFilterFields('contacts').some(field=>field.key==='email'));
   assert.ok(!tableFilterFields('accounts').some(field=>field.key==='contacts_count'));
   assert.ok(groupFields('opportunities').some(field=>field.key==='proposed_services'));
-  assert.ok(groupFields('opportunities').some(field=>field.key==='deal_labels'));
+  assert.ok(!groupFields('opportunities').some(field=>field.key==='deal_labels'),'Deal labels retired on 4 Nov 2026');
 });
 test('saved views discard retired filter/group fields without losing columns, sorting or valid conditions', () => {
   const filters=[{id:'old',field:'finstat_url',operator:'contains',value:'finstat'},{id:'keep',field:'kind',operator:'eq',value:'Client'}];
-  const saved=restoreView({filters,filterMode:'any',listGroupBy:'finstat_url',groupBy:'website',visibleKeys:['website','finstat_url'],sortKey:'website'},'accounts');
+  const saved=restoreView({filters,filterMode:'any',listGroupBy:'finstat_url',groupBy:'industry',visibleKeys:['industry','finstat_url'],sortKey:'industry'},'accounts');
   assert.deepEqual(saved.filters,[{...filters[1],field:'lifecycle',value:'Customer'}]);
   assert.equal(saved.listGroupBy,'');
-  assert.equal(saved.groupBy,'lead_status');
+  assert.equal(saved.groupBy,'industry');
   assert.equal(saved.filterMode,'any');
-  assert.deepEqual(saved.visibleKeys,['website']);
-  assert.equal(saved.sortKey,'website');
+  assert.deepEqual(saved.visibleKeys,['industry']);
+  assert.equal(saved.sortKey,'industry');
 });
 test('Event grouping places a record in each linked event once and retains unassigned records', () => {
   const rows=[{id:'a',events:['one','two','one']},{id:'b',events:['two']},{id:'c',events:[]}];

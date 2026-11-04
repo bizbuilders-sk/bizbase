@@ -27,7 +27,7 @@ function companyContext():Field[]{return [
  {key:'company_lead_status',label:'Company lead status',type:'select',options:LEAD_STATUSES,linked:{table:'accounts',via:'account_id',field:'lead_status'},visible:true},
  {key:'company_lifecycle',label:'Company lifecycle',type:'select',options:['Prospect','Customer','Former customer'],linked:{table:'accounts',via:'account_id',field:'lifecycle'}},
  {key:'company_roles',label:'Company roles',type:'multiselect',options:['Client','Vendor','Partner'],linked:{table:'accounts',via:'account_id',field:'roles'}},
- {key:'company_registration_number',label:'Company registration no.',linked:{table:'accounts',via:'account_id',field:'registration_number'}},
+ {key:'company_registration_number',label:'Company ID',linked:{table:'accounts',via:'account_id',field:'registration_number'}},
  {key:'company_address',label:'Company address',linked:{table:'accounts',via:'account_id',field:'address'}},
  {key:'company_website',label:'Company website',linked:{table:'accounts',via:'account_id',field:'website'}},
  {key:'company_industry',label:'Company industry',type:'select',options:COMPANY_INDUSTRIES,linked:{table:'accounts',via:'account_id',field:'industry'}},
@@ -38,8 +38,8 @@ function contactContext(via:string):Field[]{return ['email','phone'].map(field=>
 const event: Field = { key: 'event_ids', label: 'Event', type: 'multiselect', relation: 'events', readonly: true, visible: false, width: 250 };
 export const MARKETING_FIELDS:Field[] = [
   {key:'registered_at',label:'Form received on',type:'date',readonly:true,visible:false,width:160},
-  {key:'follow_up',label:'Marketing follow-up',type:'select',options:FOLLOW_UP_STEPS,width:210},
-  ...MARKETING_FIELD_SPECS.map(spec=>({key:'response_'+spec.key,label:spec.key==='follow_up_notes'?'Follow-up notes':spec.key==='source_detail'?'Reported source':spec.key==='lead_form'?'Form type':spec.key==='heard_about'?'Discovery channel':spec.label,type:spec.type,options:spec.options,path:spec.key,container:'marketing_fields' as const,nullableBoolean:spec.type==='boolean',visible:['follow_up_notes','first_email_sent'].includes(spec.key),width:spec.type==='textarea'?240:180})),
+  {key:'follow_up',label:'Sales follow-up',type:'select',options:FOLLOW_UP_STEPS,width:210},
+  ...MARKETING_FIELD_SPECS.map(spec=>({key:'response_'+spec.key,label:spec.key==='follow_up_notes'?'Follow-up notes':spec.key==='lead_form'?'Form type':spec.key==='heard_about'?'How they heard about us':spec.label,type:spec.type,options:spec.options,path:spec.key,container:'marketing_fields' as const,nullableBoolean:spec.type==='boolean',visible:['follow_up_notes','first_email_sent'].includes(spec.key),width:spec.type==='textarea'?240:180})),
 ];
 function marketingColumns(scope:MarketingScope):Field[] {
   return MARKETING_FIELDS.map(field=>({...field,key:'marketing_'+field.key,registrationKey:field.key,registrationScope:scope,path:undefined,container:undefined,readonly:true,required:false,visible:field.key==='follow_up',type:field.type==='select'||field.type==='boolean'?'multiselect':field.type,options:field.type==='boolean'?['Yes','No']:field.options}));
@@ -55,10 +55,10 @@ export const DEFINITIONS: Record<TableName, Definition> = {
     { ...event, eventScope: 'accounts' }, ...marketingColumns('accounts'),
     { key: 'industry', label: 'Industry', type:'select',options:COMPANY_INDUSTRIES,width: 200 }, { key: 'company_size', label: 'Company size' },
     { key: 'website', label: 'Website', width: 210 }, { key: 'finstat_url', label: 'FinStat URL', visible: false },
-    {key:'registration_number',label:'Company registration no.',visible:false}, {key:'address',label:'Address',type:'textarea',visible:false}, {key:'revenue_band',label:'Company revenue range',type:'select',options:REVENUE_BANDS,visible:false},
+    {key:'registration_number',label:'Company ID',visible:false}, {key:'address',label:'Address',type:'textarea',visible:false}, {key:'revenue_band',label:'Company revenue range',type:'select',options:REVENUE_BANDS,visible:false},
     {key:'invoice_emails',label:'Invoice email',type:'multiselect',readonly:true,visible:false},
   ] },
-  contacts: { singular: 'contact', plural: 'Contacts', titleKey: 'first_name', groupBy: 'account_id', defaults: { is_primary: false }, fields: [
+  contacts: { singular: 'contact', plural: 'Contacts', titleKey: 'first_name', groupBy: 'company_lead_status', defaults: { is_primary: false }, fields: [
     { key: 'first_name', label: 'First name', width: 170 }, { key: 'last_name', label: 'Last name', width: 170 }, { ...account, required: false },
     { key: 'role_title', label: 'Job title', width: 170 }, { key: 'email', label: 'Email', type: 'email', width: 230 }, { key: 'phone', label: 'Phone', width: 155 }, ...companyContext(),
     { ...event, eventScope: 'contacts' }, ...marketingColumns('contacts'),
@@ -74,7 +74,7 @@ export const DEFINITIONS: Record<TableName, Definition> = {
     {"key":"deal_channel","label":"Reported acquisition channel","readonly":true,"type":"select","container":"custom_fields","path":"source_channel","options":["Marketing (web, podcast, LI, kampane)","Event & Webinar","Partner","Private contacts","Old client"],"visible":false},
     {"key":"deal_imported_notes","label":"Imported sales notes","readonly":true,"type":"textarea","container":"custom_fields","path":"imported_notes","visible":false},
     { key: 'stage', label: 'Stage', required: true, type: 'select', options: STAGES, width: 190 },
-    { key: 'amount', label: 'Forecast · EUR', required: true, type: 'number', min: 0, width: 130 },
+    { key: 'amount', label: 'Deal value · EUR', required: true, type: 'number', min: 0, width: 130 },
     { key: 'probability', label: 'Probability · %', required: true, type: 'number', min: 0, max: 100 },
     { key: 'expected_close', label: 'Expected close', type: 'date' }, { key: 'next_activity', label: 'Next activity', type: 'date' }, {...owner,label:'Sales owner'},
     { key: 'lost_reason', label: 'Lost reason', visible: false }, originalSource,sourceSystem,acquisitionChannel,notes,
@@ -111,7 +111,7 @@ export const DEFINITIONS: Record<TableName, Definition> = {
     {key:'service_name',label:'Service / scope',required:true,width:260},{key:'service_id',label:'Catalog service',relation:'services',required:true},
     {key:'amount',label:'Quoted · EUR',type:'number',min:0},{key:'sort_order',label:'Order',type:'number',min:0,visible:false},notes,
   ]},
-  services: { singular: 'service', plural: 'Service catalog', titleKey: 'name', groupBy: 'default_group', defaults: { active: true }, fields: [
+  services: { singular: 'service', plural: 'Service catalog', titleKey: 'name', groupBy: 'active', defaults: { active: true }, fields: [
     { key: 'name', label: 'Service', required: true, width: 280 }, { key: 'default_group', label: 'Default group', type: 'select', options: GROUPS }, { key: 'active', label: 'Active', type: 'boolean' },
   ] },
   project_services: { singular: 'service line', plural: 'Services', titleKey: 'service_name', groupBy: 'service_id', defaults: { amount: 0, sort_order: 0 }, fields: [
@@ -138,7 +138,7 @@ export const DEFINITIONS: Record<TableName, Definition> = {
     { key: 'company_name', label: 'Reported company', visible: false },
     { key: 'email', label: 'Registration email', type: 'email', width: 230 }, { key: 'phone', label: 'Registration phone', visible: false },
     { key: 'participation_status', label: 'Attendance', required: true, type: 'select', options: ['Registered','Attended','Did not attend','Cancelled','Unknown'] },
-    { key: 'registered_at', label: 'Registered on', type: 'date', readonly: true },
+    { key: 'registered_at', label: 'Form received on', type: 'date', readonly: true },
     { key: 'sales_interest', label: 'Sales interest', required: true, type: 'select', options: ['Not recorded','Requested audit','Requested meeting','Enquiry','Follow-up','Not interested'], width: 190 },
     ...MARKETING_FIELDS.filter(field=>field.key!=='registered_at'),
     { key: 'review_status', label: 'Contact review', required: true, type: 'select', options: ['Needs review','Reviewed','Conflict'], width: 170 },

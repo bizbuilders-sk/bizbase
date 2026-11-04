@@ -40,15 +40,18 @@ test('an earlier form receipt survives a delayed CU task creation while native a
 });
 
 test('form receipt filters correlate with the same event response and allow inclusive bounds',()=>{
- const registrations=[{id:'sep',account_id:'company',event_id:'sep',registered_at:'2026-09-01T10:00:00Z',follow_up:'MB rieši'},{id:'oct',account_id:'company',event_id:'oct',registered_at:'2026-09-30T22:30:00Z',follow_up:'Neoslovujeme'}];
- const data={event_participations:registrations};const fields=tableFilterFields('accounts');
+ // Form received on is a Contacts filter; Companies dropped it on 4 Nov 2026.
+ assert.ok(!tableFilterFields('accounts').some(f=>f.registrationKey==='registered_at'));
+ const person={id:'person',account_id:'company'};
+ const registrations=[{id:'sep',account_id:'company',contact_id:'person',event_id:'sep',registered_at:'2026-09-01T10:00:00Z',follow_up:'MB rieši'},{id:'oct',account_id:'company',contact_id:'person',event_id:'oct',registered_at:'2026-09-30T22:30:00Z',follow_up:'Neoslovujeme'}];
+ const data={event_participations:registrations};const fields=tableFilterFields('contacts');
  const receipt=fields.find(f=>f.registrationKey==='registered_at');
- assert.deepEqual(marketingValues(data,'accounts',company,'registered_at','oct'),['2026-10-01']);
+ assert.deepEqual(marketingValues(data,'contacts',person,'registered_at','oct'),['2026-10-01']);
  const rules=[{id:'from',field:receipt.key,operator:'on_or_after',value:'2026-10-01'},{id:'to',field:receipt.key,operator:'on_or_before',value:'2026-10-31'}];
- const read=(row,f)=>f.registrationKey?marketingValues(data,'accounts',row,f.registrationKey):relatedFieldValue(data,row,f);
- assert.equal(matchesMarketingFilters(data,'accounts',company,rules,fields,read,'all'),true);
- assert.equal(matchesMarketingFilters(data,'accounts',company,[...rules,{id:'follow',field:'marketing_follow_up',operator:'eq',value:'MB rieši'}],fields,read,'all'),false);
- assert.equal(matchesMarketingFilters(data,'accounts',company,rules,fields,read,'all','sep'),false);
+ const read=(row,f)=>f.registrationKey?marketingValues(data,'contacts',row,f.registrationKey):relatedFieldValue(data,row,f);
+ assert.equal(matchesMarketingFilters(data,'contacts',person,rules,fields,read,'all'),true);
+ assert.equal(matchesMarketingFilters(data,'contacts',person,[...rules,{id:'follow',field:'marketing_follow_up',operator:'eq',value:'MB rieši'}],fields,read,'all'),false);
+ assert.equal(matchesMarketingFilters(data,'contacts',person,rules,fields,read,'all','sep'),false);
  assert.equal(matchesFilters({id:'day',date:'2026-10-01'},[{id:'boundary',field:'date',operator:'on_or_before',value:'2026-10-01'}],[{key:'date',type:'date',label:'Date'}]),true);
  const lead={id:'lead',account_id:'company',submitted_at:'2026-10-21T12:00:00Z',marketing_fields:{}};
  assert.deepEqual(marketingValues({intake_leads:[lead]},'accounts',company,'registered_at'),['2026-10-21']);

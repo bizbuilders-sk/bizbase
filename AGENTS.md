@@ -1,5 +1,11 @@
 # BizBase development rules
 
+## Field decisions
+
+- The field review is closed (4 November 2026). `docs/FIELD-DECISIONS.md` records the outcome; `src/table-field-policy.ts` and `src/workspace-model.ts` are the source of truth.
+- To change a field's Column / Filter / Group by or its label, edit those files and the matching test directly. Do not generate new field-review reports, spreadsheets or inventories, and do not reopen settled field decisions unless the user asks.
+- Items under "Not done: features" in that file are separate features. Build each one only when the user asks.
+
 ## Source systems
 
 - ClickUp and Pipedrive are strictly read-only. Never create, update, merge or delete records in either source system. Consolidation and edits happen in BizBase only.

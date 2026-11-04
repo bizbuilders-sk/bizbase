@@ -78,13 +78,13 @@ test('source company fields follow the current relationship, stay outside patche
  assert.ok(filters.some(f=>f.key===city.key));assert.ok(groups.some(f=>f.key===city.key));
  assert.ok(filters.some(f=>f.key==='company_revenue_band'));assert.ok(filters.some(f=>f.key==='company_roles'));
  assert.ok(!groups.some(f=>f.sourceName==='Total activities'||f.sourceName==='Next activity'));
- assert.ok(groups.some(f=>f.key==='role_title'),'the current job title is the business grouping');
+ assert.ok(filters.some(f=>f.key==='role_title')&&!groups.some(f=>f.key==='role_title'),'the current job title is a filter, not a grouping (4 Nov 2026)');
  assert.ok(!filters.some(f=>f.sourceName==='Pozícia'),'duplicate source job titles are retired from table components');
  const empty=find(extension.fields.accounts,'Missing');
  assert.ok(!defs.accounts.fields.some(f=>f.key===empty.key),'unused imported fields are not registered');
  assert.ok(!availableGroupFields('accounts',[{id:'company'}],(row,f)=>relatedFieldValue(data,row,f)).some(f=>f.key===empty.key));
  const owner=find(extension.fields.contacts,'Owner');const saved=restoreView({groupBy:owner.key,filters:[{id:'owner',field:owner.key,operator:'eq',value:'Alex'}]},'contacts',data);
- assert.equal(saved.groupBy,'account_id');assert.deepEqual(saved.filters,[]);
+ assert.equal(saved.groupBy,DEFINITIONS.contacts.groupBy);assert.deepEqual(saved.filters,[]);
 });
 
 test('selected events scope imported marketing parameters without restricting master/company source parameters',()=>{

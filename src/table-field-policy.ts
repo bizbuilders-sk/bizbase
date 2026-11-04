@@ -2,48 +2,65 @@ import type {Field, TableName} from './workspace-model.ts';
 
 // These are registrations, not visibility defaults. Fields absent here cannot
 // enter a table's Columns, Filters or Group by menus through imported metadata.
-const responseColumns = ['follow_up','response_follow_up_notes','response_dc_notes','response_first_email_sent','response_audit_requested','response_consultation_requested','response_heard_about','response_interest','response_competition_entered','response_full_report_requested','response_lead_form','registered_at'];
-const responseFilters = ['follow_up','response_first_email_sent','response_audit_requested','response_consultation_requested','response_heard_about','response_interest','response_competition_entered','response_full_report_requested','response_lead_form','registered_at'];
-const responseGroups = ['follow_up','response_heard_about','response_first_email_sent','response_audit_requested','response_consultation_requested','response_competition_entered','response_full_report_requested','response_lead_form'];
+// Field review closed 4 November 2026 (docs/FIELD-DECISIONS.md). Change a
+// field here directly; do not regenerate a review to decide it.
+//
+// Event/form responses as projected onto Companies, Contacts and Enquiries.
+// Retired everywhere: first email sent, interest, full report requested.
+// Removed from Companies/Contacts: competition entered, form type.
+const responseColumns = ['follow_up','response_follow_up_notes','response_dc_notes','response_audit_requested','response_consultation_requested','response_heard_about','registered_at'];
+const responseFilters = ['follow_up','response_audit_requested','response_consultation_requested','response_heard_about','registered_at'];
+const responseGroups = ['follow_up','response_heard_about','response_audit_requested','response_consultation_requested'];
+const intakeResponseColumns = [...responseColumns,'response_competition_entered','response_lead_form'];
+const intakeResponseFilters = [...responseFilters,'response_competition_entered','response_lead_form'];
+const intakeResponseGroups = [...responseGroups,'response_competition_entered','response_lead_form'];
+// The same responses inside Event history (one row per registration).
+const registrationColumns = ['follow_up','response_follow_up_notes','response_dc_notes','response_audit_requested','response_consultation_requested','response_heard_about','response_offering','response_competitors','response_audit_brand','response_takeaway_goal','response_competition_entered','response_source_detail','response_reported_website','response_lead_form','registered_at'];
+const registrationFilters = ['follow_up','response_audit_requested','response_consultation_requested','response_heard_about','response_source_detail','response_lead_form'];
+const registrationGroups = ['follow_up','response_heard_about','response_source_detail','response_lead_form'];
 const responses = (keys:string[]) => keys.map(key=>'marketing_'+key);
-const companySegments = ['company_industry','company_size','company_revenue_band'];
+const without = (keys:string[],drop:string[]) => keys.filter(key=>!drop.includes(key));
 export type TableControls = {columns:string[];filter:string[];group:string[]};
 export const TABLE_CONTROLS:Record<TableName,TableControls> = {
  accounts:{
-  columns:['name','received_on','lead_status','lifecycle','roles','industry','company_size','website','invoice_emails','event_ids',...responses(responseColumns)],
-  filter:['lead_status','lifecycle','roles','industry','company_size','revenue_band','event_ids',...responses(responseFilters)],
-  group:['lead_status','lifecycle','roles','industry','company_size','revenue_band','event_ids',...responses(responseGroups)],
+  columns:['name','received_on','lead_status','lifecycle','roles','industry','registration_number','event_ids',...responses(without(responseColumns,['registered_at']))],
+  filter:['lead_status','lifecycle','roles','industry','revenue_band','event_ids',...responses(without(responseFilters,['registered_at']))],
+  group:['lead_status','lifecycle','roles','industry','revenue_band','event_ids',...responses(responseGroups)],
  },
  contacts:{
-  columns:['first_name','last_name','account_id','role_title','email','phone',...companySegments,'company_lead_status','company_lifecycle','company_roles','event_ids',...responses(responseColumns)],
-  filter:['account_id','role_title',...companySegments,'company_lead_status','company_lifecycle','company_roles','event_ids',...responses(responseFilters)],
-  group:['account_id','role_title',...companySegments,'company_lead_status','company_lifecycle','company_roles','event_ids',...responses(responseGroups)],
+  columns:['first_name','last_name','account_id','role_title','email','phone','company_industry','company_registration_number','company_lead_status','company_lifecycle','event_ids',...responses(responseColumns)],
+  filter:['last_name','account_id','role_title','email','phone','company_industry','company_revenue_band','company_lead_status','company_lifecycle','company_roles','event_ids',...responses(responseFilters)],
+  group:['company_industry','company_revenue_band','company_lead_status','company_lifecycle','company_roles','event_ids',...responses(responseGroups)],
  },
  opportunities:{
-  columns:['name','received_on','added_on','account_id','primary_contact_id','contact_email','contact_phone','proposed_services','deal_labels','deal_type','stage','amount','probability','expected_close','next_activity','owner_id','lost_reason','acquisition_channel',...companySegments,'notes','source_system'],
-  filter:['stage','owner_id','account_id','primary_contact_id','proposed_services','deal_labels','deal_type','acquisition_channel',...companySegments,'amount','probability','expected_close','next_activity','lost_reason','source_system','received_on','added_on'],
-  group:['stage','owner_id','account_id','proposed_services','deal_labels','deal_type','acquisition_channel',...companySegments],
+  columns:['name','received_on','added_on','account_id','primary_contact_id','contact_email','contact_phone','proposed_services','deal_type','stage','amount','probability','expected_close','next_activity','owner_id','lost_reason','acquisition_channel','company_industry','notes','source_system'],
+  filter:['stage','owner_id','proposed_services','deal_type','acquisition_channel','company_industry','company_revenue_band','probability','expected_close','next_activity','lost_reason','source_system','received_on','added_on'],
+  group:['stage','owner_id','proposed_services','deal_type','acquisition_channel','company_industry','company_revenue_band','lost_reason'],
  },
  intake_leads:{
-  columns:['lead_title','submitted_at','account_id','contact_id','submission_contact','submission_email','submission_phone','contact_email','contact_phone','owner_id','journey_status','acquisition_channel','source_form','source_system','history_scan_status','finstat_status','submission_message',...companySegments,'event_ids',...responses(responseColumns)],
-  filter:['journey_status','owner_id','account_id','contact_id','submission_email','submission_phone','acquisition_channel','source_form','source_system','submitted_at','history_scan_status','finstat_status',...companySegments,'event_ids',...responses(responseFilters)],
-  group:['journey_status','owner_id','acquisition_channel','source_form','account_id',...companySegments,'event_ids',...responses(responseGroups)],
+  columns:['lead_title','submitted_at','account_id','contact_id','submission_contact','submission_email','submission_phone','contact_email','contact_phone','owner_id','journey_status','acquisition_channel','source_form','source_system','history_scan_status','finstat_status','submission_message','company_industry','event_ids',...responses(intakeResponseColumns)],
+  filter:['journey_status','owner_id','account_id','contact_id','submission_email','submission_phone','acquisition_channel','source_form','source_system','submitted_at','history_scan_status','finstat_status','company_industry','company_revenue_band','event_ids',...responses(intakeResponseFilters)],
+  group:['journey_status','owner_id','acquisition_channel','source_form','account_id','company_industry','company_revenue_band','event_ids',...responses(intakeResponseGroups)],
  },
  projects:{
-  columns:['name','received_on','added_on','account_id','project_group','status','contract_value','start_date','end_date','owner_id','planned_revenue','planned_cost','opportunity_id','primary_contact_id','contact_email','company_lead_status','company_lifecycle','data_quality_status'],
-  filter:['status','project_group','owner_id','account_id','contract_value','start_date','end_date','planned_revenue','planned_cost','data_quality_status','received_on','added_on'],
-  group:['status','project_group','owner_id','account_id','data_quality_status'],
+  // Revenue plan / vendor budget totals: Project card only (decided 4 Nov 2026).
+  columns:['name','received_on','added_on','account_id','project_group','status','contract_value','start_date','end_date','owner_id','primary_contact_id','contact_email','contact_phone'],
+  filter:['status','project_group','owner_id','account_id','opportunity_id','primary_contact_id','start_date','end_date','received_on','added_on'],
+  group:['status','project_group','owner_id','account_id'],
  },
- services:{columns:['name','default_group','active'],filter:['default_group','active'],group:['default_group','active']},
- project_services:{columns:['service_name','service_id','amount','notes'],filter:['service_id','amount'],group:['service_id']},
+ // Active stays as the one category so the catalog can still be filtered/grouped.
+ services:{columns:['name'],filter:['active'],group:['active']},
+ project_services:{columns:['service_name','service_id','amount','notes'],filter:['service_id'],group:['service_id']},
  opportunity_services:{columns:['service_name','service_id','amount','notes'],filter:['service_id','amount'],group:['service_id']},
- vendor_costs:{columns:['description','vendor_name','planned_amount','actual_amount','status','expected_date','invoice_date','notes'],filter:['status','vendor_name','planned_amount','actual_amount','expected_date','invoice_date'],group:['status','vendor_name']},
+ // Budget and actual stay here: this list is the financial detail view.
+ vendor_costs:{columns:['description','vendor_name','planned_amount','actual_amount','status','notes'],filter:['status','vendor_name','planned_amount','actual_amount'],group:['status','vendor_name']},
  team_members:{columns:['name','active'],filter:['active'],group:['active']},
- events:{columns:['name','event_type','starts_on','period','participant_count','notes'],filter:['event_type','starts_on','period','participant_count'],group:['event_type','period']},
+ events:{columns:['name','event_type','starts_on','participant_count','notes'],filter:['event_type','starts_on'],group:['event_type']},
  event_participations:{
-  columns:['name','event_id','contact_id','account_id','company_name','email','phone','participation_status','sales_interest','review_status',...responseColumns],
-  filter:['event_id','participation_status','sales_interest','review_status','account_id','contact_id','company_name','email','phone',...responseFilters],
-  group:['event_id','participation_status','sales_interest','review_status','account_id',...responseGroups],
+  // Registrant details live on the linked Contact; the row shows the responses.
+  columns:['event_id','contact_id',...registrationColumns],
+  filter:['event_id','contact_id',...registrationFilters],
+  group:['event_id',...registrationGroups],
  },
 };
 
