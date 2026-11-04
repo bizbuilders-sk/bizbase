@@ -21,3 +21,30 @@ function sourceClient(row){return row.raw_record.custom_fields.find(f=>f.name===
 test('conflicting or absent exact-ID evidence never chooses a client by name or majority',async()=>{const p=project();p.raw_record.custom_fields=p.raw_record.custom_fields.filter(f=>f.name!=='CLIENT');const a=revenue('r1','2026-01','100'),b=revenue('r2','2026-02','200');b.raw_record.custom_fields.find(f=>f.name==='CLIENT').value=[{id:'unresolved-client'}];const conflict=await buildPromotion([account(),p,a,b]);assert.equal(conflict.tables.projects.length,0);assert.equal(conflict.recoveries.length,0);a.raw_record.custom_fields.find(f=>f.name==='CLIENT').value=[];b.raw_record.custom_fields.find(f=>f.name==='CLIENT').value=[];const absent=await buildPromotion([account(),p,a,b]);assert.equal(absent.tables.projects.length,0);assert.equal(absent.recoveries.length,0);});
 test('population verifies rows, preserves human edits on rerun, and never posts invoice/payment tables',async()=>{const plan=await buildPromotion([account(),project()]);const db=new Map(),calls=[];const request=async(path,options={})=>{const table=path.split('?')[0];calls.push([table,options.method]);if(options.method==='PATCH')return null;if(options.method==='POST'){const rows=JSON.parse(options.body);if(table==='integration_events')return null;db.set(table,[...(db.get(table)||[]),...rows]);return null;}return db.get(table)||[];};await populateOperational(plan,request);db.get('accounts')[0].name='Human correction';const second=await populateOperational(plan,request);assert.equal(db.get('accounts').length,1);assert.equal(db.get('accounts')[0].name,'Human correction');assert.equal(second.created.projects,0);assert.equal(second.preserved.projects,1);assert.equal(calls.some(([t])=>['invoices','payments','invoice_allocations'].includes(t)),false);});
 test('failed population stops before recording success and can resume without duplicating earlier rows',async()=>{const plan=await buildPromotion([account(),project()]),db=new Map();let fail=true,events=0;const request=async(path,opts={})=>{const table=path.split('?')[0];if(opts.method==='PATCH')return null;if(opts.method==='POST'){if(table==='integration_events'){events++;return null;}if(table==='projects'&&fail)throw Error('Write rejected');db.set(table,[...(db.get(table)||[]),...JSON.parse(opts.body)]);return null;}return db.get(table)||[];};await assert.rejects(populateOperational(plan,request),/Write rejected/);assert.equal(events,0);assert.equal(db.get('accounts').length,1);fail=false;await populateOperational(plan,request);assert.equal(events,1);assert.equal(db.get('accounts').length,1);assert.equal(db.get('projects').length,1);});
+
+
+test('repopulation resolves a merged source company to its BizBase survivor',async()=>{
+  const plan=await buildPromotion([account(),project()]);
+  const original=plan.tables.accounts[0].id;
+  const db=new Map([
+    ['source_identity_map',[{entity_type:'account',source_external_id:plan.tables.accounts[0].source_external_id,canonical_id:'survivor-account'}]],
+    ['accounts',[{id:'survivor-account',name:'Surviving company'}]],
+  ]);
+  const request=async(path,options={})=>{
+    const table=path.split('?')[0];
+    if(options.method==='PATCH')return null;
+    if(options.method==='POST'){
+      const rows=JSON.parse(options.body);if(table==='integration_events')return null;
+      const known=db.get(table)||[];
+      if(table==='source_identity_map')db.set(table,[...known,...rows.filter(r=>!known.some(x=>x.entity_type===r.entity_type&&x.source_external_id===r.source_external_id))]);
+      else db.set(table,[...known,...rows.filter(r=>!known.some(x=>x.id===r.id))]);
+      return null;
+    }
+    return db.get(table)||[];
+  };
+  await populateOperational(plan,request);
+  assert.notEqual(original,'survivor-account');
+  assert.equal(plan.tables.accounts[0].id,'survivor-account');
+  assert.equal(plan.tables.projects[0].account_id,'survivor-account');
+  assert.equal(db.get('accounts').filter(row=>row.id===original).length,0);
+});

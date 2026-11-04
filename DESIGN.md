@@ -22,8 +22,8 @@ The live Shopify theme exposes its font and color values as CSS variables. These
 ## Design direction for BizBase
 
 - Keep BizBase's restrained, product-like shell and dense operational tables. Use white content surfaces, a very light mint application canvas, and navy text.
-- Use purple for selected navigation, primary buttons, and key links. Reserve yellow for a small number of status or emphasis treatments; do not make it a general call-to-action color.
-- Use DM Sans throughout interface controls and data. Use Poppins for page and section titles, with moderate weights and compact sizes so reporting stays legible.
+- Entity colors: Contacts and Companies use BizBuilders yellow `#FACD11`, with navy button text and dark gold `#725900` text on white. Deals retain violet `#5230DA`. Projects use green `#008042`. Apply entity colors to tabs, primary actions and portal menus; status colors remain independent. Navigation stays gray, with a gray selected background. Page and card headings have no colored markers. The BizBase logo uses yellow `#FACD11` with navy lettering.
+- Use Noto Sans as the primary interface typeface for reliable Slovak and Latin Extended character coverage, with Lato and system sans-serif fallbacks. Keep bold, compact operational headings so table pages remain strong and easy to scan. The current marketing font pair remains useful reference material.
 - Retain the console's existing compact radii, spacing, and low-contrast dividers. The reference is a marketing site; its oversized display typography, rounded CTA buttons, gradients, photos, and promotional sections are not appropriate for operational screens.
 
 ## Evidence and capture
@@ -36,3 +36,6 @@ The live Shopify theme exposes its font and color values as CSS variables. These
 ## Rerun inputs
 
 - `https://bizbuilders.sk/`
+
+
+Company qualification: Company owns Lead status (New / SQL / No Lead) and Lifecycle independently, with database-enforced valid combinations. Contacts display the linked value; clicking it opens the Company rather than editing an independent contact classification. Company cards allow manual Customer / Former customer changes only for SQL companies with customer history. Other Lifecycle values follow Lead status. New sales require an identified Company and Contact; historical blanks remain visible and repairable. Winning a Deal creates a Draft delivery Project, while completing delivery never automatically marks a Company Former customer.

@@ -5,3 +5,19 @@
 node_modules/
 .sites-checkout/
 .sites-runtime/
+
+# Private CRM cleanup snapshots and reviewed change sets
+/outputs/contact-name-cleanup-*
+
+# Private CRM field-review snapshots
+/outputs/data-cleanup-*
+
+# Private editable field-review workbook
+/outputs/01a149a2-a276-7840-91f9-e3b69ba1165e/BizBase fields and values review.xlsx*
+
+# Field-review files containing real CRM sample values (names, emails). The GitHub repo is public.
+/BizBase fields and values review.xlsx
+/outputs/
+/docs/field-decisions-review-*
+/docs/field-review-simple-*
+/docs/field-sheet-edits-*

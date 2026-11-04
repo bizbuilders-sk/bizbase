@@ -106,6 +106,24 @@ export async function buildPromotion(rows,{existingServices=[]}={}){
 
 export async function populateOperational(plan,request,progress=()=>{}){
   const result={created:{},preserved:{}};
+  // A merged source record keeps an alias to the surviving operational row.
+  // Resolve aliases before constructing any rows or foreign-key relationships.
+  let identities=[];
+  try{identities=await readAll(request,'source_identity_map','entity_type,source_external_id,canonical_id')}catch{}
+  const canonical=new Map(identities.map(x=>[`${x.entity_type}:${x.source_external_id}`,x.canonical_id]));
+  const aliases={account:new Map(),contact:new Map()};
+  for(const type of ['account','contact'])for(const row of plan.tables[type==='account'?'accounts':'contacts']){
+    const id=canonical.get(`${type}:${row.source_external_id}`);
+    if(id&&id!==row.id){aliases[type].set(row.id,id);row.id=id;}
+  }
+  const rewrite=(type,id)=>aliases[type].get(id)||id;
+  for(const row of plan.tables.contacts)row.account_id=rewrite('account',row.account_id);
+  for(const row of plan.tables.projects)row.account_id=rewrite('account',row.account_id);
+  for(const row of plan.tables.vendors)row.account_id=rewrite('account',row.account_id);
+  for(const link of plan.links)if(link.accountId)link.accountId=rewrite('account',link.accountId);
+  for(const table of ['accounts','contacts']){
+    const seen=new Set();plan.tables[table]=plan.tables[table].filter(row=>{if(seen.has(row.id))return false;seen.add(row.id);return true;});
+  }
   for(const [table,rows] of Object.entries(plan.tables)){
     const existing=await readAll(request,table,'id');const known=new Set(existing.map(r=>r.id));const pending=rows.filter(r=>!known.has(r.id));
     result.created[table]=0;result.preserved[table]=rows.length-pending.length;
@@ -113,9 +131,11 @@ export async function populateOperational(plan,request,progress=()=>{}){
     const stored=new Set((await readAll(request,table,'id')).map(r=>r.id));if(rows.some(r=>!stored.has(r.id)))throw Error(`Could not verify all ${table} records. Retry to resume.`);
   }
   for(let i=0;i<plan.links.length;i+=10){await Promise.all(plan.links.slice(i,i+10).map(link=>{const update={...(link.accountId?{proposed_account_id:link.accountId}:{}),...(link.projectId?{proposed_project_id:link.projectId}:{})};return request(`migration_staging?id=eq.${link.stagingId}`,{method:'PATCH',headers:{Prefer:'return=minimal'},body:JSON.stringify(update)});}));progress(`Verifying source links · ${Math.min(i+10,plan.links.length)} of ${plan.links.length}`);}
+  const identityRows=[...plan.tables.accounts.map(row=>({entity_type:'account',source_external_id:row.source_external_id,canonical_id:row.id})),...plan.tables.contacts.map(row=>({entity_type:'contact',source_external_id:row.source_external_id,canonical_id:row.id}))].filter(row=>row.source_external_id);
+  for(let i=0;i<identityRows.length;i+=100){await request('source_identity_map?on_conflict=entity_type,source_external_id',{method:'POST',headers:{Prefer:'resolution=ignore-duplicates,return=minimal'},body:JSON.stringify(identityRows.slice(i,i+100))});}
   await request('integration_events',{method:'POST',headers:{Prefer:'return=minimal'},body:JSON.stringify({integration:'ClickUp operational promotion',external_event_id:crypto.randomUUID(),entity_type:'migration_staging',direction:'Inbound',status:'Processed',payload:{rules:plan.rules,source_count:plan.sourceCount,result,summary:plan.summary,recovered_links:plan.recoveries.map(r=>({source_record_id:r.row.source_record_id,field:r.field,client_id:r.clientId,basis:r.basis,evidence:r.evidence})),company_target_rule:'Use record names, user approved 2026-10-17',legacy_group_rule:'Taktika EXT → Taktika, user approved 2026-10-17',invoices_created:0,payments_created:0}})});
   return result;
 }
 export async function readAll(request,table,select='*'){
-  const all=[];for(let offset=0;;offset+=500){const rows=await request(`${table}?select=${select}&order=id.asc&limit=500&offset=${offset}`);all.push(...rows);if(rows.length<500)break;}return all;
+  const all=[],order=table==='source_identity_map'?'source_external_id':'id';for(let offset=0;;offset+=500){const rows=await request(`${table}?select=${select}&order=${order}.asc&limit=500&offset=${offset}`);all.push(...rows);if(rows.length<500)break;}return all;
 }

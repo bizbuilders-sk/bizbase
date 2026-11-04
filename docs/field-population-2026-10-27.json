@@ -1,0 +1,792 @@
+{
+  "date": "2026-10-27",
+  "note": "Non-empty database values only; zero and false count as populated. Snapshot excludes nested/form values and computed fields.",
+  "fields": [
+    {
+      "entity": "accounts",
+      "key": "acquisition_channel",
+      "total": 768,
+      "filled": 0
+    },
+    {
+      "entity": "accounts",
+      "key": "address",
+      "total": 768,
+      "filled": 108
+    },
+    {
+      "entity": "accounts",
+      "key": "classification_before_lead_status",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "company_size",
+      "total": 768,
+      "filled": 0
+    },
+    {
+      "entity": "accounts",
+      "key": "created_at",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "data_quality_status",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "finstat_url",
+      "total": 768,
+      "filled": 0
+    },
+    {
+      "entity": "accounts",
+      "key": "has_customer_history",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "id",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "industry",
+      "total": 768,
+      "filled": 1
+    },
+    {
+      "entity": "accounts",
+      "key": "kind",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "lead_status",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "legal_name",
+      "total": 768,
+      "filled": 102
+    },
+    {
+      "entity": "accounts",
+      "key": "lifecycle",
+      "total": 768,
+      "filled": 421
+    },
+    {
+      "entity": "accounts",
+      "key": "name",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "qualification_notes",
+      "total": 768,
+      "filled": 284
+    },
+    {
+      "entity": "accounts",
+      "key": "qualification_score",
+      "total": 768,
+      "filled": 0
+    },
+    {
+      "entity": "accounts",
+      "key": "qualification_status",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "registration_number",
+      "total": 768,
+      "filled": 98
+    },
+    {
+      "entity": "accounts",
+      "key": "revenue_band",
+      "total": 768,
+      "filled": 134
+    },
+    {
+      "entity": "accounts",
+      "key": "roles",
+      "total": 768,
+      "filled": 275
+    },
+    {
+      "entity": "accounts",
+      "key": "source",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "source_external_id",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "trading_name",
+      "total": 768,
+      "filled": 229
+    },
+    {
+      "entity": "accounts",
+      "key": "updated_at",
+      "total": 768,
+      "filled": 768
+    },
+    {
+      "entity": "accounts",
+      "key": "website",
+      "total": 768,
+      "filled": 5
+    },
+    {
+      "entity": "contacts",
+      "key": "account_id",
+      "total": 749,
+      "filled": 596
+    },
+    {
+      "entity": "contacts",
+      "key": "created_at",
+      "total": 749,
+      "filled": 749
+    },
+    {
+      "entity": "contacts",
+      "key": "email",
+      "total": 749,
+      "filled": 606
+    },
+    {
+      "entity": "contacts",
+      "key": "first_name",
+      "total": 749,
+      "filled": 709
+    },
+    {
+      "entity": "contacts",
+      "key": "id",
+      "total": 749,
+      "filled": 749
+    },
+    {
+      "entity": "contacts",
+      "key": "is_primary",
+      "total": 749,
+      "filled": 749
+    },
+    {
+      "entity": "contacts",
+      "key": "last_name",
+      "total": 749,
+      "filled": 667
+    },
+    {
+      "entity": "contacts",
+      "key": "notes",
+      "total": 749,
+      "filled": 274
+    },
+    {
+      "entity": "contacts",
+      "key": "phone",
+      "total": 749,
+      "filled": 504
+    },
+    {
+      "entity": "contacts",
+      "key": "role_title",
+      "total": 749,
+      "filled": 13
+    },
+    {
+      "entity": "contacts",
+      "key": "source_external_id",
+      "total": 749,
+      "filled": 749
+    },
+    {
+      "entity": "event_participations",
+      "key": "account_id",
+      "total": 599,
+      "filled": 454
+    },
+    {
+      "entity": "event_participations",
+      "key": "company_name",
+      "total": 599,
+      "filled": 362
+    },
+    {
+      "entity": "event_participations",
+      "key": "contact_id",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "created_at",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "email",
+      "total": 599,
+      "filled": 595
+    },
+    {
+      "entity": "event_participations",
+      "key": "event_id",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "follow_up",
+      "total": 599,
+      "filled": 390
+    },
+    {
+      "entity": "event_participations",
+      "key": "id",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "intake_lead_id",
+      "total": 599,
+      "filled": 123
+    },
+    {
+      "entity": "event_participations",
+      "key": "marketing_fields",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "name",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "notes",
+      "total": 599,
+      "filled": 396
+    },
+    {
+      "entity": "event_participations",
+      "key": "participation_status",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "phone",
+      "total": 599,
+      "filled": 395
+    },
+    {
+      "entity": "event_participations",
+      "key": "registered_at",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "review_status",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "sales_interest",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "source",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "source_external_id",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "event_participations",
+      "key": "updated_at",
+      "total": 599,
+      "filled": 599
+    },
+    {
+      "entity": "opportunities",
+      "key": "account_id",
+      "total": 303,
+      "filled": 297
+    },
+    {
+      "entity": "opportunities",
+      "key": "acquisition_channel",
+      "total": 303,
+      "filled": 275
+    },
+    {
+      "entity": "opportunities",
+      "key": "amount",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "created_at",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "custom_fields",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "expected_close",
+      "total": 303,
+      "filled": 55
+    },
+    {
+      "entity": "opportunities",
+      "key": "id",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "intake_lead_id",
+      "total": 303,
+      "filled": 0
+    },
+    {
+      "entity": "opportunities",
+      "key": "lost_reason",
+      "total": 303,
+      "filled": 196
+    },
+    {
+      "entity": "opportunities",
+      "key": "name",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "next_activity",
+      "total": 303,
+      "filled": 93
+    },
+    {
+      "entity": "opportunities",
+      "key": "notes",
+      "total": 303,
+      "filled": 0
+    },
+    {
+      "entity": "opportunities",
+      "key": "owner",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "owner_id",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "primary_contact_id",
+      "total": 303,
+      "filled": 287
+    },
+    {
+      "entity": "opportunities",
+      "key": "probability",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "source",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "source_external_id",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "stage",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunities",
+      "key": "updated_at",
+      "total": 303,
+      "filled": 303
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "amount",
+      "total": 105,
+      "filled": 0
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "created_at",
+      "total": 105,
+      "filled": 105
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "id",
+      "total": 105,
+      "filled": 105
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "notes",
+      "total": 105,
+      "filled": 0
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "opportunity_id",
+      "total": 105,
+      "filled": 105
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "service_id",
+      "total": 105,
+      "filled": 105
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "service_name",
+      "total": 105,
+      "filled": 105
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "sort_order",
+      "total": 105,
+      "filled": 105
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "source_product",
+      "total": 105,
+      "filled": 105
+    },
+    {
+      "entity": "opportunity_services",
+      "key": "updated_at",
+      "total": 105,
+      "filled": 105
+    },
+    {
+      "entity": "project_services",
+      "key": "amount",
+      "total": 29,
+      "filled": 29
+    },
+    {
+      "entity": "project_services",
+      "key": "created_at",
+      "total": 29,
+      "filled": 29
+    },
+    {
+      "entity": "project_services",
+      "key": "id",
+      "total": 29,
+      "filled": 29
+    },
+    {
+      "entity": "project_services",
+      "key": "notes",
+      "total": 29,
+      "filled": 29
+    },
+    {
+      "entity": "project_services",
+      "key": "project_id",
+      "total": 29,
+      "filled": 29
+    },
+    {
+      "entity": "project_services",
+      "key": "service_id",
+      "total": 29,
+      "filled": 29
+    },
+    {
+      "entity": "project_services",
+      "key": "service_name",
+      "total": 29,
+      "filled": 29
+    },
+    {
+      "entity": "project_services",
+      "key": "sort_order",
+      "total": 29,
+      "filled": 29
+    },
+    {
+      "entity": "projects",
+      "key": "account_id",
+      "total": 276,
+      "filled": 274
+    },
+    {
+      "entity": "projects",
+      "key": "agreement_id",
+      "total": 276,
+      "filled": 0
+    },
+    {
+      "entity": "projects",
+      "key": "contract_value",
+      "total": 276,
+      "filled": 95
+    },
+    {
+      "entity": "projects",
+      "key": "created_at",
+      "total": 276,
+      "filled": 276
+    },
+    {
+      "entity": "projects",
+      "key": "data_quality_status",
+      "total": 276,
+      "filled": 276
+    },
+    {
+      "entity": "projects",
+      "key": "end_date",
+      "total": 276,
+      "filled": 56
+    },
+    {
+      "entity": "projects",
+      "key": "id",
+      "total": 276,
+      "filled": 276
+    },
+    {
+      "entity": "projects",
+      "key": "name",
+      "total": 276,
+      "filled": 276
+    },
+    {
+      "entity": "projects",
+      "key": "opportunity_id",
+      "total": 276,
+      "filled": 69
+    },
+    {
+      "entity": "projects",
+      "key": "owner",
+      "total": 276,
+      "filled": 76
+    },
+    {
+      "entity": "projects",
+      "key": "owner_id",
+      "total": 276,
+      "filled": 76
+    },
+    {
+      "entity": "projects",
+      "key": "primary_contact_id",
+      "total": 276,
+      "filled": 61
+    },
+    {
+      "entity": "projects",
+      "key": "project_group",
+      "total": 276,
+      "filled": 71
+    },
+    {
+      "entity": "projects",
+      "key": "source_external_id",
+      "total": 276,
+      "filled": 276
+    },
+    {
+      "entity": "projects",
+      "key": "start_date",
+      "total": 276,
+      "filled": 71
+    },
+    {
+      "entity": "projects",
+      "key": "status",
+      "total": 276,
+      "filled": 276
+    },
+    {
+      "entity": "projects",
+      "key": "updated_at",
+      "total": 276,
+      "filled": 276
+    },
+    {
+      "entity": "services",
+      "key": "active",
+      "total": 21,
+      "filled": 21
+    },
+    {
+      "entity": "services",
+      "key": "created_at",
+      "total": 21,
+      "filled": 21
+    },
+    {
+      "entity": "services",
+      "key": "default_group",
+      "total": 21,
+      "filled": 0
+    },
+    {
+      "entity": "services",
+      "key": "id",
+      "total": 21,
+      "filled": 21
+    },
+    {
+      "entity": "services",
+      "key": "name",
+      "total": 21,
+      "filled": 21
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "actual_amount",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "created_at",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "description",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "expected_date",
+      "total": 122,
+      "filled": 0
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "id",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "invoice_date",
+      "total": 122,
+      "filled": 0
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "notes",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "planned_amount",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "project_id",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "source_external_id",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "status",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "updated_at",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "vendor_id",
+      "total": 122,
+      "filled": 122
+    },
+    {
+      "entity": "vendor_costs",
+      "key": "vendor_name",
+      "total": 122,
+      "filled": 122
+    }
+  ]
+}

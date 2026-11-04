@@ -1,0 +1,3926 @@
+{
+  "checkedOn": "2026-10-21",
+  "basis": "Read-only aggregate of existing BizBase source snapshots; excludes builtin ClickUp task metadata. No contact values.",
+  "fields": [
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "6de02991-2808-44fa-8d2e-50b9298a4799",
+      "field_name": "ADDRESS",
+      "populated": 101
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "3afb002d-e269-4ba0-a775-ca01b121e446",
+      "field_name": "CITY",
+      "populated": 101
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "da181821-f75b-4a0a-99ae-da6950fc09bf",
+      "field_name": "CONTACT PHONE",
+      "populated": 2
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "ef69fab0-0534-45a9-a573-e6bf62f9b580",
+      "field_name": "CONTACTS",
+      "populated": 40
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "94b893d7-1cb7-4ffa-bfdf-f166f6b01ee0",
+      "field_name": "COUNTRY",
+      "populated": 101
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "19eac77d-4fc3-4f1c-9510-c4c42f07333b",
+      "field_name": "ICO",
+      "populated": 98
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "7dd6aa04-ee13-4448-bc4a-bce8d7182d08",
+      "field_name": "INVOICE EMAIL",
+      "populated": 28
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "062f87f1-823a-4fb5-82ef-65ebd0e1c9a3",
+      "field_name": "LEGAL NAME",
+      "populated": 101
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "6f26ef22-0482-4a00-b570-c40f524f9e37",
+      "field_name": "PONUKY",
+      "populated": 3
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "c3db18f3-6029-4e94-8597-e0a2e2f988ce",
+      "field_name": "Project Cost Saved",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "5fe7586a-7dee-42c2-972a-012a39fa5fd9",
+      "field_name": "PROJECTS",
+      "populated": 146
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "c839bace-cfb5-47e6-8e76-0218e705a932",
+      "field_name": "PSC",
+      "populated": 99
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515191148",
+      "source_container_name": "CLIENTS",
+      "record_type": "account",
+      "field_id": "afbbf78b-3f56-4224-bf5b-457f74a324a8",
+      "field_name": "REVENUE",
+      "populated": 220
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 43
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 44
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "be81f6c8-cc47-4466-9950-daaf9fee9baf",
+      "field_name": "ICO",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "3172ed3c-3d16-4c95-83b3-f635a34ec645",
+      "field_name": "info k DC",
+      "populated": 9
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "98fb1328-c5f9-4ca3-9935-bbe116c54340",
+      "field_name": "Kontakt poznámky",
+      "populated": 21
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "94cb3509-3c02-4626-bc05-4aa0769c4518",
+      "field_name": "KONZULTÁCIA",
+      "populated": 29
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 19
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "ec8c1463-9040-4797-804c-78053525fc67",
+      "field_name": "Next step",
+      "populated": 32
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 14
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 18
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "abae703c-c31a-4a44-9fe8-4b50e1aabf5e",
+      "field_name": "SÚŤAŽ",
+      "populated": 42
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "20b9e270-a96a-41ae-8e42-1934dec51eb6",
+      "field_name": "1-3 hlavní konkurenti",
+      "populated": 38
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "20b9e270-a96a-41ae-8e42-1934dec51eb6",
+      "field_name": "1-3 hlavní konkurenti",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "a2b44554-ddb5-40f9-807c-8894d5aab6fe",
+      "field_name": "Akú značku chcete auditovať?",
+      "populated": 37
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "a2b44554-ddb5-40f9-807c-8894d5aab6fe",
+      "field_name": "Akú značku chcete auditovať?",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "687e25c5-ca96-488c-8c02-214c1c419aae",
+      "field_name": "chcem si odniest",
+      "populated": 30
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "687e25c5-ca96-488c-8c02-214c1c419aae",
+      "field_name": "chcem si odniest",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "13f0578d-4646-467c-a2f5-bba4f3ec51fe",
+      "field_name": "Čo predávate a komu",
+      "populated": 38
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "13f0578d-4646-467c-a2f5-bba4f3ec51fe",
+      "field_name": "Čo predávate a komu",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "77a47806-4df1-47f8-be62-8c8c9ef97fbf",
+      "field_name": "COMPANY",
+      "populated": 285
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "77a47806-4df1-47f8-be62-8c8c9ef97fbf",
+      "field_name": "COMPANY",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "ef567a1a-8b01-4c43-9dd4-4c1c105a5756",
+      "field_name": "DATE",
+      "populated": 287
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "ef567a1a-8b01-4c43-9dd4-4c1c105a5756",
+      "field_name": "DATE",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "73ac4c2b-9348-4f7d-bd36-bb8e419cd927",
+      "field_name": "dozvedel som sa",
+      "populated": 48
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "73ac4c2b-9348-4f7d-bd36-bb8e419cd927",
+      "field_name": "dozvedel som sa",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "cade09f0-2232-4f8b-b3d2-c8cef675a6b0",
+      "field_name": "Email",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "cade09f0-2232-4f8b-b3d2-c8cef675a6b0",
+      "field_name": "Email",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 289
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 310
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "12e64e20-c55e-4177-926c-a05683b2fcf8",
+      "field_name": "Kde ste sa dozvedeli",
+      "populated": 123
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "12e64e20-c55e-4177-926c-a05683b2fcf8",
+      "field_name": "Kde ste sa dozvedeli",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 285
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 296
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 133
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "6e8b3995-cbb1-4ff9-a6a8-2f703e4b96fd",
+      "field_name": "Notes",
+      "populated": 106
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "6e8b3995-cbb1-4ff9-a6a8-2f703e4b96fd",
+      "field_name": "Notes",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "ee6cf4d5-6502-4edd-b976-ab84367138b3",
+      "field_name": "Phone",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "ee6cf4d5-6502-4edd-b976-ab84367138b3",
+      "field_name": "Phone",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 285
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "18f9c5a0-3d5f-4ab5-9940-5692476ace74",
+      "field_name": "poslany 1.mail",
+      "populated": 9
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "18f9c5a0-3d5f-4ab5-9940-5692476ace74",
+      "field_name": "poslany 1.mail",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "002f41a8-4b41-4506-9b20-6266b4bfafa5",
+      "field_name": "Poznamka k DC",
+      "populated": 66
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "002f41a8-4b41-4506-9b20-6266b4bfafa5",
+      "field_name": "Poznamka k DC",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "acfa8fc4-81a7-4d90-9f56-68dceaaa8adb",
+      "field_name": "SOURCE",
+      "populated": 288
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "acfa8fc4-81a7-4d90-9f56-68dceaaa8adb",
+      "field_name": "SOURCE",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 17
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "e5006672-db2b-477e-adb0-5d4d25ee51dd",
+      "field_name": "Záujem o vypracovanie auditu zdarma?",
+      "populated": 40
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "e5006672-db2b-477e-adb0-5d4d25ee51dd",
+      "field_name": "Záujem o vypracovanie auditu zdarma?",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6de02991-2808-44fa-8d2e-50b9298a4799",
+      "field_name": "ADDRESS",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "77a47806-4df1-47f8-be62-8c8c9ef97fbf",
+      "field_name": "COMPANY",
+      "populated": 73
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "ef567a1a-8b01-4c43-9dd4-4c1c105a5756",
+      "field_name": "DATE",
+      "populated": 74
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 73
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 68
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "be81f6c8-cc47-4466-9950-daaf9fee9baf",
+      "field_name": "ICO",
+      "populated": 37
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6316430f-f68a-473f-a148-00c8db0bb3d7",
+      "field_name": "INTEREST",
+      "populated": 37
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "fa7c6e04-fc16-4c41-86dd-e56e86823aeb",
+      "field_name": "ITEM PRICE",
+      "populated": 46
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "f92fb43b-fd7e-435a-b6a1-f190bf7882de",
+      "field_name": "LEAD FORM",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6326ee76-9508-4ab2-a5f2-31527e699c74",
+      "field_name": "MONTH",
+      "populated": 68
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 76
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 61
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6e8b3995-cbb1-4ff9-a6a8-2f703e4b96fd",
+      "field_name": "Notes",
+      "populated": 18
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 66
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6034b78f-29fb-4ece-87ae-d39d3387ee25",
+      "field_name": "QUANTITY",
+      "populated": 68
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "acfa8fc4-81a7-4d90-9f56-68dceaaa8adb",
+      "field_name": "SOURCE",
+      "populated": 74
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "a243419e-93e0-4cdb-8979-0da3e3753e37",
+      "field_name": "TOTAL PRICE",
+      "populated": 46
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "edb41624-2d3c-42b6-a56b-c8e91afd31b0",
+      "field_name": "Contact Name",
+      "populated": 7
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "da181821-f75b-4a0a-99ae-da6950fc09bf",
+      "field_name": "CONTACT PHONE",
+      "populated": 4
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "c3ef1bac-ed4e-4f0b-beb6-1b603df53916",
+      "field_name": "EXT WORK ORDERS",
+      "populated": 52
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "7dd6aa04-ee13-4448-bc4a-bce8d7182d08",
+      "field_name": "INVOICE EMAIL",
+      "populated": 5
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "64760b12-753f-4ff5-8039-cb33940de9e5",
+      "field_name": "Nickname",
+      "populated": 3
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "c3db18f3-6029-4e94-8597-e0a2e2f988ce",
+      "field_name": "Project Cost Saved",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "d93f92db-0423-48a7-b7c0-841f53200c0b",
+      "field_name": "Service Type",
+      "populated": 48
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "add_time",
+      "field_name": "add_time",
+      "populated": 596
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "address",
+      "field_name": "address",
+      "populated": 7
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "annual_revenue",
+      "field_name": "annual_revenue",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "employee_count",
+      "field_name": "employee_count",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "id",
+      "field_name": "id",
+      "populated": 596
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "industry",
+      "field_name": "industry",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "is_deleted",
+      "field_name": "is_deleted",
+      "populated": 596
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "label_ids",
+      "field_name": "label_ids",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "labels",
+      "field_name": "labels",
+      "populated": 0
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "linkedin",
+      "field_name": "linkedin",
+      "populated": 1
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "name",
+      "field_name": "name",
+      "populated": 593
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "owner_id",
+      "field_name": "owner_id",
+      "populated": 596
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "update_time",
+      "field_name": "update_time",
+      "populated": 596
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "visible_to",
+      "field_name": "visible_to",
+      "populated": 596
+    },
+    {
+      "entity_type": "account",
+      "source_system": "Pipedrive",
+      "source_container_id": "organizations",
+      "source_container_name": "Organizations",
+      "record_type": "account",
+      "field_id": "website",
+      "field_name": "website",
+      "populated": 5
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515237494",
+      "source_container_name": "CONTACTS",
+      "record_type": "contact",
+      "field_id": "ef69fab0-0534-45a9-a573-e6bf62f9b580",
+      "field_name": "COMPANY",
+      "populated": 44
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515237494",
+      "source_container_name": "CONTACTS",
+      "record_type": "contact",
+      "field_id": "cade09f0-2232-4f8b-b3d2-c8cef675a6b0",
+      "field_name": "Email",
+      "populated": 19
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515237494",
+      "source_container_name": "CONTACTS",
+      "record_type": "contact",
+      "field_id": "9a0f53fa-a0b7-412f-ada6-b821523c8650",
+      "field_name": "Person - Organization",
+      "populated": 42
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515237494",
+      "source_container_name": "CONTACTS",
+      "record_type": "contact",
+      "field_id": "ee6cf4d5-6502-4edd-b976-ab84367138b3",
+      "field_name": "Phone",
+      "populated": 15
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515237494",
+      "source_container_name": "CONTACTS",
+      "record_type": "contact",
+      "field_id": "dad5d76a-e13f-48e7-86f0-425c3496ffb2",
+      "field_name": "Pozícia",
+      "populated": 13
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515237494",
+      "source_container_name": "CONTACTS",
+      "record_type": "contact",
+      "field_id": "c3db18f3-6029-4e94-8597-e0a2e2f988ce",
+      "field_name": "Project Cost Saved",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 30
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "9e9afab3-f74c-4e15-a411-f1131df82583",
+      "field_name": "FREE KONZULTACIA",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "a77913b9-4cb1-4ec4-9134-4d2b5bc32868",
+      "field_name": "FULL REPORT",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "be81f6c8-cc47-4466-9950-daaf9fee9baf",
+      "field_name": "ICO",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "3172ed3c-3d16-4c95-83b3-f635a34ec645",
+      "field_name": "info k DC",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "a5b74c6f-aaac-4f95-b46f-e488f3346380",
+      "field_name": "Komentar klienta",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "98fb1328-c5f9-4ca3-9935-bbe116c54340",
+      "field_name": "Kontakt poznámky",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "94cb3509-3c02-4626-bc05-4aa0769c4518",
+      "field_name": "KONZULTÁCIA",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "ec8c1463-9040-4797-804c-78053525fc67",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "d08876c1-d22e-4378-b41c-40db799fd3e1",
+      "field_name": "Report Lead Date",
+      "populated": 30
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "abae703c-c31a-4a44-9fe8-4b50e1aabf5e",
+      "field_name": "SÚŤAŽ",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "1200920000003188",
+      "source_container_name": "LEADY FINAL REPORT",
+      "record_type": "event_participation",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 148
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 149
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "be81f6c8-cc47-4466-9950-daaf9fee9baf",
+      "field_name": "ICO",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "3172ed3c-3d16-4c95-83b3-f635a34ec645",
+      "field_name": "info k DC",
+      "populated": 16
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "98fb1328-c5f9-4ca3-9935-bbe116c54340",
+      "field_name": "Kontakt poznámky",
+      "populated": 51
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "94cb3509-3c02-4626-bc05-4aa0769c4518",
+      "field_name": "KONZULTÁCIA",
+      "populated": 83
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 52
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "ec8c1463-9040-4797-804c-78053525fc67",
+      "field_name": "Next step",
+      "populated": 84
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 36
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 40
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "abae703c-c31a-4a44-9fe8-4b50e1aabf5e",
+      "field_name": "SÚŤAŽ",
+      "populated": 141
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "20b9e270-a96a-41ae-8e42-1934dec51eb6",
+      "field_name": "1-3 hlavní konkurenti",
+      "populated": 38
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "20b9e270-a96a-41ae-8e42-1934dec51eb6",
+      "field_name": "1-3 hlavní konkurenti",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "a2b44554-ddb5-40f9-807c-8894d5aab6fe",
+      "field_name": "Akú značku chcete auditovať?",
+      "populated": 37
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "a2b44554-ddb5-40f9-807c-8894d5aab6fe",
+      "field_name": "Akú značku chcete auditovať?",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "687e25c5-ca96-488c-8c02-214c1c419aae",
+      "field_name": "chcem si odniest",
+      "populated": 31
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "687e25c5-ca96-488c-8c02-214c1c419aae",
+      "field_name": "chcem si odniest",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "13f0578d-4646-467c-a2f5-bba4f3ec51fe",
+      "field_name": "Čo predávate a komu",
+      "populated": 38
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "13f0578d-4646-467c-a2f5-bba4f3ec51fe",
+      "field_name": "Čo predávate a komu",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "77a47806-4df1-47f8-be62-8c8c9ef97fbf",
+      "field_name": "COMPANY",
+      "populated": 286
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "77a47806-4df1-47f8-be62-8c8c9ef97fbf",
+      "field_name": "COMPANY",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "ef567a1a-8b01-4c43-9dd4-4c1c105a5756",
+      "field_name": "DATE",
+      "populated": 289
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "ef567a1a-8b01-4c43-9dd4-4c1c105a5756",
+      "field_name": "DATE",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "73ac4c2b-9348-4f7d-bd36-bb8e419cd927",
+      "field_name": "dozvedel som sa",
+      "populated": 50
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "73ac4c2b-9348-4f7d-bd36-bb8e419cd927",
+      "field_name": "dozvedel som sa",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "cade09f0-2232-4f8b-b3d2-c8cef675a6b0",
+      "field_name": "Email",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "cade09f0-2232-4f8b-b3d2-c8cef675a6b0",
+      "field_name": "Email",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 291
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 342
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "12e64e20-c55e-4177-926c-a05683b2fcf8",
+      "field_name": "Kde ste sa dozvedeli",
+      "populated": 124
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "12e64e20-c55e-4177-926c-a05683b2fcf8",
+      "field_name": "Kde ste sa dozvedeli",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 287
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 306
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 136
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "6e8b3995-cbb1-4ff9-a6a8-2f703e4b96fd",
+      "field_name": "Notes",
+      "populated": 122
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "6e8b3995-cbb1-4ff9-a6a8-2f703e4b96fd",
+      "field_name": "Notes",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "ee6cf4d5-6502-4edd-b976-ab84367138b3",
+      "field_name": "Phone",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "ee6cf4d5-6502-4edd-b976-ab84367138b3",
+      "field_name": "Phone",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 287
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "18f9c5a0-3d5f-4ab5-9940-5692476ace74",
+      "field_name": "poslany 1.mail",
+      "populated": 25
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "18f9c5a0-3d5f-4ab5-9940-5692476ace74",
+      "field_name": "poslany 1.mail",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "002f41a8-4b41-4506-9b20-6266b4bfafa5",
+      "field_name": "Poznamka k DC",
+      "populated": 82
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "002f41a8-4b41-4506-9b20-6266b4bfafa5",
+      "field_name": "Poznamka k DC",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "acfa8fc4-81a7-4d90-9f56-68dceaaa8adb",
+      "field_name": "SOURCE",
+      "populated": 290
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "acfa8fc4-81a7-4d90-9f56-68dceaaa8adb",
+      "field_name": "SOURCE",
+      "populated": 1
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 17
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "e5006672-db2b-477e-adb0-5d4d25ee51dd",
+      "field_name": "Záujem o vypracovanie auditu zdarma?",
+      "populated": 40
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "e5006672-db2b-477e-adb0-5d4d25ee51dd",
+      "field_name": "Záujem o vypracovanie auditu zdarma?",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6de02991-2808-44fa-8d2e-50b9298a4799",
+      "field_name": "ADDRESS",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "77a47806-4df1-47f8-be62-8c8c9ef97fbf",
+      "field_name": "COMPANY",
+      "populated": 73
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "ef567a1a-8b01-4c43-9dd4-4c1c105a5756",
+      "field_name": "DATE",
+      "populated": 75
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 74
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 69
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "be81f6c8-cc47-4466-9950-daaf9fee9baf",
+      "field_name": "ICO",
+      "populated": 38
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6316430f-f68a-473f-a148-00c8db0bb3d7",
+      "field_name": "INTEREST",
+      "populated": 38
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "fa7c6e04-fc16-4c41-86dd-e56e86823aeb",
+      "field_name": "ITEM PRICE",
+      "populated": 47
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "f92fb43b-fd7e-435a-b6a1-f190bf7882de",
+      "field_name": "LEAD FORM",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6326ee76-9508-4ab2-a5f2-31527e699c74",
+      "field_name": "MONTH",
+      "populated": 69
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 77
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 62
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6e8b3995-cbb1-4ff9-a6a8-2f703e4b96fd",
+      "field_name": "Notes",
+      "populated": 18
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 67
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "6034b78f-29fb-4ece-87ae-d39d3387ee25",
+      "field_name": "QUANTITY",
+      "populated": 69
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "acfa8fc4-81a7-4d90-9f56-68dceaaa8adb",
+      "field_name": "SOURCE",
+      "populated": 75
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "a243419e-93e0-4cdb-8979-0da3e3753e37",
+      "field_name": "TOTAL PRICE",
+      "populated": 47
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901516689943",
+      "source_container_name": "LEADY Z WEBU / BIZTALKS",
+      "record_type": "event_participation",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "edb41624-2d3c-42b6-a56b-c8e91afd31b0",
+      "field_name": "Contact Name",
+      "populated": 7
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "da181821-f75b-4a0a-99ae-da6950fc09bf",
+      "field_name": "CONTACT PHONE",
+      "populated": 4
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "c3ef1bac-ed4e-4f0b-beb6-1b603df53916",
+      "field_name": "EXT WORK ORDERS",
+      "populated": 7
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "7dd6aa04-ee13-4448-bc4a-bce8d7182d08",
+      "field_name": "INVOICE EMAIL",
+      "populated": 5
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "64760b12-753f-4ff5-8039-cb33940de9e5",
+      "field_name": "Nickname",
+      "populated": 3
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "c3db18f3-6029-4e94-8597-e0a2e2f988ce",
+      "field_name": "Project Cost Saved",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "ClickUp",
+      "source_container_id": "901515197551",
+      "source_container_name": "VENDORS",
+      "record_type": "vendor",
+      "field_id": "d93f92db-0423-48a7-b7c0-841f53200c0b",
+      "field_name": "Service Type",
+      "populated": 7
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "activities_count",
+      "field_name": "activities_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "add_time",
+      "field_name": "add_time",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "closed_deals_count",
+      "field_name": "closed_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "done_activities_count",
+      "field_name": "done_activities_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "email_messages_count",
+      "field_name": "email_messages_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "emails",
+      "field_name": "emails",
+      "populated": 446
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "files_count",
+      "field_name": "files_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "first_name",
+      "field_name": "first_name",
+      "populated": 581
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "followers_count",
+      "field_name": "followers_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "id",
+      "field_name": "id",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "is_deleted",
+      "field_name": "is_deleted",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "label_ids",
+      "field_name": "label_ids",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "labels",
+      "field_name": "labels",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "last_activity_date",
+      "field_name": "last_activity_date",
+      "populated": 257
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "last_activity_id",
+      "field_name": "last_activity_id",
+      "populated": 257
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "last_activity_recorded",
+      "field_name": "last_activity_recorded",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "last_incoming_mail_time",
+      "field_name": "last_incoming_mail_time",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "last_name",
+      "field_name": "last_name",
+      "populated": 536
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "last_outgoing_mail_time",
+      "field_name": "last_outgoing_mail_time",
+      "populated": 0
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "lost_deals_count",
+      "field_name": "lost_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "name",
+      "field_name": "name",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "next_activity_date",
+      "field_name": "next_activity_date",
+      "populated": 100
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "next_activity_id",
+      "field_name": "next_activity_id",
+      "populated": 100
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "next_activity_scheduled",
+      "field_name": "next_activity_scheduled",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "notes_count",
+      "field_name": "notes_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "open_deals_count",
+      "field_name": "open_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "org_id",
+      "field_name": "org_id",
+      "populated": 564
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "owner_id",
+      "field_name": "owner_id",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "participant_closed_deals_count",
+      "field_name": "participant_closed_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "participant_open_deals_count",
+      "field_name": "participant_open_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "phones",
+      "field_name": "phones",
+      "populated": 451
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "picture_id",
+      "field_name": "picture_id",
+      "populated": 17
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "related_closed_deals_count",
+      "field_name": "related_closed_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "related_lost_deals_count",
+      "field_name": "related_lost_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "related_open_deals_count",
+      "field_name": "related_open_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "related_won_deals_count",
+      "field_name": "related_won_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "undone_activities_count",
+      "field_name": "undone_activities_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "update_time",
+      "field_name": "update_time",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "visible_to",
+      "field_name": "visible_to",
+      "populated": 583
+    },
+    {
+      "entity_type": "contact",
+      "source_system": "Pipedrive",
+      "source_container_id": "persons",
+      "source_container_name": "Persons",
+      "record_type": "contact",
+      "field_id": "won_deals_count",
+      "field_name": "won_deals_count",
+      "populated": 583
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 69
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 70
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "be81f6c8-cc47-4466-9950-daaf9fee9baf",
+      "field_name": "ICO",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "3172ed3c-3d16-4c95-83b3-f635a34ec645",
+      "field_name": "info k DC",
+      "populated": 13
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "98fb1328-c5f9-4ca3-9935-bbe116c54340",
+      "field_name": "Kontakt poznámky",
+      "populated": 44
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "94cb3509-3c02-4626-bc05-4aa0769c4518",
+      "field_name": "KONZULTÁCIA",
+      "populated": 70
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 41
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "ec8c1463-9040-4797-804c-78053525fc67",
+      "field_name": "Next step",
+      "populated": 62
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 23
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 32
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "abae703c-c31a-4a44-9fe8-4b50e1aabf5e",
+      "field_name": "SÚŤAŽ",
+      "populated": 63
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523553561",
+      "source_container_name": "LEADY PRIESKUM",
+      "record_type": "event_participation",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "20b9e270-a96a-41ae-8e42-1934dec51eb6",
+      "field_name": "1-3 hlavní konkurenti",
+      "populated": 15
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "20b9e270-a96a-41ae-8e42-1934dec51eb6",
+      "field_name": "1-3 hlavní konkurenti",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "a2b44554-ddb5-40f9-807c-8894d5aab6fe",
+      "field_name": "Akú značku chcete auditovať?",
+      "populated": 15
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "a2b44554-ddb5-40f9-807c-8894d5aab6fe",
+      "field_name": "Akú značku chcete auditovať?",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "687e25c5-ca96-488c-8c02-214c1c419aae",
+      "field_name": "chcem si odniest",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "687e25c5-ca96-488c-8c02-214c1c419aae",
+      "field_name": "chcem si odniest",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "13f0578d-4646-467c-a2f5-bba4f3ec51fe",
+      "field_name": "Čo predávate a komu",
+      "populated": 15
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "13f0578d-4646-467c-a2f5-bba4f3ec51fe",
+      "field_name": "Čo predávate a komu",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "77a47806-4df1-47f8-be62-8c8c9ef97fbf",
+      "field_name": "COMPANY",
+      "populated": 16
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "77a47806-4df1-47f8-be62-8c8c9ef97fbf",
+      "field_name": "COMPANY",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "ef567a1a-8b01-4c43-9dd4-4c1c105a5756",
+      "field_name": "DATE",
+      "populated": 16
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "ef567a1a-8b01-4c43-9dd4-4c1c105a5756",
+      "field_name": "DATE",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "73ac4c2b-9348-4f7d-bd36-bb8e419cd927",
+      "field_name": "dozvedel som sa",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "73ac4c2b-9348-4f7d-bd36-bb8e419cd927",
+      "field_name": "dozvedel som sa",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "cade09f0-2232-4f8b-b3d2-c8cef675a6b0",
+      "field_name": "Email",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "cade09f0-2232-4f8b-b3d2-c8cef675a6b0",
+      "field_name": "Email",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 16
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "89a238e2-2a79-4820-acfa-a381c5ac3292",
+      "field_name": "EMAIL",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 16
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "f92f3ed9-4bc4-4ab4-9b51-6f2610549754",
+      "field_name": "EVENT",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "12e64e20-c55e-4177-926c-a05683b2fcf8",
+      "field_name": "Kde ste sa dozvedeli",
+      "populated": 11
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "12e64e20-c55e-4177-926c-a05683b2fcf8",
+      "field_name": "Kde ste sa dozvedeli",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 16
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "1e6c6798-89e1-4075-beeb-1e0fcf4cbf73",
+      "field_name": "NAME",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 16
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "54be1c25-3d22-4736-8a14-7fc16f321509",
+      "field_name": "Next step",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 15
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "cac069ec-3de7-4910-9198-e5337bbb85bc",
+      "field_name": "Next step (Poznámky)",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "6e8b3995-cbb1-4ff9-a6a8-2f703e4b96fd",
+      "field_name": "Notes",
+      "populated": 9
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "6e8b3995-cbb1-4ff9-a6a8-2f703e4b96fd",
+      "field_name": "Notes",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "ee6cf4d5-6502-4edd-b976-ab84367138b3",
+      "field_name": "Phone",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "ee6cf4d5-6502-4edd-b976-ab84367138b3",
+      "field_name": "Phone",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 16
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "e9f3056f-fecb-4dae-830b-3291b1111f8b",
+      "field_name": "PHONE",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "18f9c5a0-3d5f-4ab5-9940-5692476ace74",
+      "field_name": "poslany 1.mail",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "18f9c5a0-3d5f-4ab5-9940-5692476ace74",
+      "field_name": "poslany 1.mail",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "002f41a8-4b41-4506-9b20-6266b4bfafa5",
+      "field_name": "Poznamka k DC",
+      "populated": 9
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "002f41a8-4b41-4506-9b20-6266b4bfafa5",
+      "field_name": "Poznamka k DC",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "acfa8fc4-81a7-4d90-9f56-68dceaaa8adb",
+      "field_name": "SOURCE",
+      "populated": 16
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "acfa8fc4-81a7-4d90-9f56-68dceaaa8adb",
+      "field_name": "SOURCE",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 7
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "93b226ce-40c7-43e8-976e-82cecaca61be",
+      "field_name": "Website",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "event_participation",
+      "field_id": "e5006672-db2b-477e-adb0-5d4d25ee51dd",
+      "field_name": "Záujem o vypracovanie auditu zdarma?",
+      "populated": 16
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "ClickUp",
+      "source_container_id": "901523643875",
+      "source_container_name": "LEADY WEBINÁR",
+      "record_type": "lead",
+      "field_id": "e5006672-db2b-477e-adb0-5d4d25ee51dd",
+      "field_name": "Záujem o vypracovanie auditu zdarma?",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "2010e349aef5cdd716fdbf7a040b8e2b211788ba",
+      "field_name": "2010e349aef5cdd716fdbf7a040b8e2b211788ba",
+      "populated": 8
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "8cde75b171dc180736dfb772cbf428479c4d53da",
+      "field_name": "8cde75b171dc180736dfb772cbf428479c4d53da",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "add_time",
+      "field_name": "add_time",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "archive_reason",
+      "field_name": "archive_reason",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "archive_time",
+      "field_name": "archive_time",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "cc_email",
+      "field_name": "cc_email",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "channel",
+      "field_name": "channel",
+      "populated": 7
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "channel_id",
+      "field_name": "channel_id",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "creator_id",
+      "field_name": "creator_id",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "de9ecb696867b0d5825f0fae81763d1c4ed34d74",
+      "field_name": "de9ecb696867b0d5825f0fae81763d1c4ed34d74",
+      "populated": 8
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "expected_close_date",
+      "field_name": "expected_close_date",
+      "populated": 6
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "id",
+      "field_name": "id",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "is_archived",
+      "field_name": "is_archived",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "label_ids",
+      "field_name": "label_ids",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "next_activity_id",
+      "field_name": "next_activity_id",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "organization_id",
+      "field_name": "organization_id",
+      "populated": 400
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "origin",
+      "field_name": "origin",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "origin_id",
+      "field_name": "origin_id",
+      "populated": 0
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "owner_id",
+      "field_name": "owner_id",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "person_id",
+      "field_name": "person_id",
+      "populated": 433
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "source_deal_id",
+      "field_name": "source_deal_id",
+      "populated": 8
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "source_name",
+      "field_name": "source_name",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "title",
+      "field_name": "title",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "update_time",
+      "field_name": "update_time",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "value",
+      "field_name": "value",
+      "populated": 1
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "visible_to",
+      "field_name": "visible_to",
+      "populated": 442
+    },
+    {
+      "entity_type": "intake_lead",
+      "source_system": "Pipedrive",
+      "source_container_id": "leads",
+      "source_container_name": "Leads",
+      "record_type": "lead",
+      "field_id": "was_seen",
+      "field_name": "was_seen",
+      "populated": 442
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "add_time",
+      "field_name": "add_time",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "archive_time",
+      "field_name": "archive_time",
+      "populated": 0
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "channel",
+      "field_name": "channel",
+      "populated": 275
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "channel_id",
+      "field_name": "channel_id",
+      "populated": 0
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "close_time",
+      "field_name": "close_time",
+      "populated": 266
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "creator_user_id",
+      "field_name": "creator_user_id",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "currency",
+      "field_name": "currency",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "expected_close_date",
+      "field_name": "expected_close_date",
+      "populated": 55
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "id",
+      "field_name": "id",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "is_archived",
+      "field_name": "is_archived",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "is_deleted",
+      "field_name": "is_deleted",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "label_ids",
+      "field_name": "label_ids",
+      "populated": 18
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "labels",
+      "field_name": "labels",
+      "populated": 0
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "last_activity_id",
+      "field_name": "last_activity_id",
+      "populated": 3
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "local_close_date",
+      "field_name": "local_close_date",
+      "populated": 266
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "local_lost_date",
+      "field_name": "local_lost_date",
+      "populated": 196
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "local_won_date",
+      "field_name": "local_won_date",
+      "populated": 70
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "lost_reason",
+      "field_name": "lost_reason",
+      "populated": 196
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "lost_time",
+      "field_name": "lost_time",
+      "populated": 196
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "next_activity_id",
+      "field_name": "next_activity_id",
+      "populated": 2
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "org_id",
+      "field_name": "org_id",
+      "populated": 296
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "origin",
+      "field_name": "origin",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "origin_id",
+      "field_name": "origin_id",
+      "populated": 0
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "owner_id",
+      "field_name": "owner_id",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "person_id",
+      "field_name": "person_id",
+      "populated": 287
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "pipeline_id",
+      "field_name": "pipeline_id",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "probability",
+      "field_name": "probability",
+      "populated": 1
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "source_lead_id",
+      "field_name": "source_lead_id",
+      "populated": 1
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "stage_change_time",
+      "field_name": "stage_change_time",
+      "populated": 258
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "stage_id",
+      "field_name": "stage_id",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "status",
+      "field_name": "status",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "title",
+      "field_name": "title",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "update_time",
+      "field_name": "update_time",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "value",
+      "field_name": "value",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "visible_to",
+      "field_name": "visible_to",
+      "populated": 303
+    },
+    {
+      "entity_type": "opportunity",
+      "source_system": "Pipedrive",
+      "source_container_id": "deals",
+      "source_container_name": "Deals",
+      "record_type": "opportunity",
+      "field_id": "won_time",
+      "field_name": "won_time",
+      "populated": 70
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "aab7ebbf-6bf0-446d-ad95-9223c08e16ce",
+      "field_name": "BIZDEV STATUS",
+      "populated": 90
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "5fe7586a-7dee-42c2-972a-012a39fa5fd9",
+      "field_name": "CLIENT",
+      "populated": 223
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "9974aafd-74d0-4604-9b38-e4b57154ea3f",
+      "field_name": "Ext náklady v čase predaja",
+      "populated": 47
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "006b3f6d-f86c-4cc0-93a5-3b40f4652c9d",
+      "field_name": "EXT ORDERS PER PROJECT",
+      "populated": 97
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "ea4c50ca-4949-4de9-aa1a-233af5b4c804",
+      "field_name": "FIN MONTH",
+      "populated": 34
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "da71082f-9d8e-4170-8894-80ea4f796fcd",
+      "field_name": "INVOICING",
+      "populated": 271
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "5bd1bbc4-3899-4711-9970-7e9ec3e253fa",
+      "field_name": "NEW TASKS",
+      "populated": 1
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "8648760a-83d9-4212-a585-e8b1fa7a1026",
+      "field_name": "Project Budget Reality",
+      "populated": 6
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "c3db18f3-6029-4e94-8597-e0a2e2f988ce",
+      "field_name": "Project Cost Saved",
+      "populated": 47
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "0e5f1281-a339-470c-8de3-e64acee3204b",
+      "field_name": "Project Folder",
+      "populated": 9
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "67247f44-5995-4ed6-8761-fe52e7292bf4",
+      "field_name": "PROJECT PHASE",
+      "populated": 276
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "3e727c7a-df4e-4ba1-ada1-d54738fba811",
+      "field_name": "Project Price (predane za)",
+      "populated": 94
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "f9a3690c-41f7-49ba-a5e3-b465e8198613",
+      "field_name": "PROJECT YEAR",
+      "populated": 271
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "cc5a6232-bac1-4888-be18-07302d28d3e9",
+      "field_name": "SERVICE",
+      "populated": 45
+    },
+    {
+      "entity_type": "project",
+      "source_system": "ClickUp",
+      "source_container_id": "901515195994",
+      "source_container_name": "PROJECTS",
+      "record_type": "project",
+      "field_id": "c10a48c0-0594-4db1-8cec-f880ab34674c",
+      "field_name": "SERVICE GROUP",
+      "populated": 71
+    }
+  ]
+}

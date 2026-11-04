@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-26",
+  "project": "BizBase",
+  "migration": "20261026113620_company_lead_status_and_won_delivery.sql",
+  "deployment": "https://56da773c.bizbase.pages.dev",
+  "alias": "https://codex-cloudflare-frontend.bizbase.pages.dev",
+  "classification": {
+    "new_unassigned": 347,
+    "sql_prospect": 193,
+    "sql_customer": 228
+  },
+  "preservation": {
+    "companies": 768,
+    "contacts": 749,
+    "deals": 303,
+    "projects": 276,
+    "deal_value_eur": "1070805.00",
+    "project_value_eur": "650955.00",
+    "planned_revenue_eur": "331100.00",
+    "source_digest_unchanged": true,
+    "financial_totals_unchanged": true
+  },
+  "verification": {
+    "full_tests_passed": 139,
+    "production_staff_transaction_rolled_back": true,
+    "anonymous_denied": true,
+    "authenticated_nonmember_denied": true,
+    "new_security_advisories": 0,
+    "fresh_setup_verified": true,
+    "company_card_and_contact_column_verified": true
+  },
+  "exceptions": {
+    "historical_won_deals_without_confirmed_project": 2,
+    "legacy_deals_missing_company": 6,
+    "legacy_deals_missing_contact": 16
+  },
+  "sources_read_only": true
+}

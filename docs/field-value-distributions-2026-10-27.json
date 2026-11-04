@@ -1,0 +1,100 @@
+{
+  "date": "2026-10-27",
+  "values": [
+    {
+      "field": "company_industry",
+      "value": "Financial services",
+      "n": 1
+    },
+    {
+      "field": "company_lead_status",
+      "value": "SQL",
+      "n": 421
+    },
+    {
+      "field": "company_lead_status",
+      "value": "New",
+      "n": 347
+    },
+    {
+      "field": "company_lifecycle",
+      "value": "Unassigned",
+      "n": 347
+    },
+    {
+      "field": "company_lifecycle",
+      "value": "Customer",
+      "n": 228
+    },
+    {
+      "field": "company_lifecycle",
+      "value": "Prospect",
+      "n": 193
+    },
+    {
+      "field": "deal_stage",
+      "value": "Lost",
+      "n": 196
+    },
+    {
+      "field": "deal_stage",
+      "value": "Won",
+      "n": 70
+    },
+    {
+      "field": "deal_stage",
+      "value": "Meeting planned",
+      "n": 10
+    },
+    {
+      "field": "deal_stage",
+      "value": "Quote sent",
+      "n": 8
+    },
+    {
+      "field": "deal_stage",
+      "value": "Start",
+      "n": 8
+    },
+    {
+      "field": "deal_stage",
+      "value": "Quote in process",
+      "n": 7
+    },
+    {
+      "field": "deal_stage",
+      "value": "Meeting has happened",
+      "n": 4
+    },
+    {
+      "field": "project_group",
+      "value": "Unassigned",
+      "n": 205
+    },
+    {
+      "field": "project_group",
+      "value": "Strategia",
+      "n": 29
+    },
+    {
+      "field": "project_group",
+      "value": "Transformacia",
+      "n": 23
+    },
+    {
+      "field": "project_group",
+      "value": "Taktika",
+      "n": 19
+    },
+    {
+      "field": "project_phase",
+      "value": "Completed",
+      "n": 248
+    },
+    {
+      "field": "project_phase",
+      "value": "In delivery",
+      "n": 28
+    }
+  ]
+}

@@ -1,0 +1,770 @@
+{
+  "date": "2026-10-27",
+  "status": "Guided choices recorded; remaining recommendations prepared for exception-only review. No app/database implementation yet.",
+  "contextRule": "Each block must identify field owner, whether it was imported from ClickUp/Pipedrive or created in BizBase, and recorded values/examples. Distinguish current recorded values from available choices.",
+  "contacts": {
+    "first_name": {
+      "column": true
+    },
+    "last_name": {
+      "column": true
+    },
+    "email": {
+      "column": true,
+      "filter": true,
+      "filterOperators": [
+        "empty",
+        "not_empty"
+      ]
+    },
+    "phone": {
+      "column": true,
+      "filter": true,
+      "filterOperators": [
+        "empty",
+        "not_empty"
+      ]
+    },
+    "account_id": {
+      "column": true,
+      "filter": true,
+      "group": true,
+      "required": false
+    },
+    "role_title": {
+      "column": true,
+      "filter": true,
+      "group": false
+    },
+    "company_lead_status": {
+      "column": true,
+      "filter": true,
+      "group": true,
+      "owner": "Company"
+    },
+    "company_lifecycle": {
+      "column": true,
+      "filter": true,
+      "group": true,
+      "owner": "Company"
+    },
+    "company_industry": {
+      "column": true,
+      "filter": true,
+      "group": true,
+      "owner": "Company"
+    },
+    "company_revenue_band": {
+      "column": false,
+      "filter": true,
+      "group": true,
+      "owner": "Company"
+    },
+    "company_size": {
+      "column": false,
+      "filter": false,
+      "group": false,
+      "owner": "Company",
+      "retainInCompanyCard": true
+    },
+    "company_roles": {
+      "column": false,
+      "filter": true,
+      "group": true,
+      "owner": "Company"
+    },
+    "event_ids": {
+      "column": true,
+      "filter": true,
+      "group": true,
+      "owner": "Event participation",
+      "relationship": "many-to-many"
+    },
+    "marketing_follow_up": {
+      "label": "Sales follow-up",
+      "column": true,
+      "filter": true,
+      "group": true,
+      "owner": "Event participation",
+      "origin": "ClickUp Next step",
+      "eventScoped": true
+    },
+    "marketing_response_follow_up_notes": {
+      "label": "Sales follow-up notes",
+      "column": true,
+      "filter": false,
+      "group": false,
+      "owner": "Event participation",
+      "origin": "ClickUp Next step (Poznámky)",
+      "eventScoped": true
+    },
+    "marketing_response_dc_notes": {
+      "decision": "Merge",
+      "mergeInto": "marketing_response_follow_up_notes",
+      "label": "DC note",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "owner": "Event participation",
+      "origin": "ClickUp Poznamka k DC / info k DC",
+      "preserveAllText": true,
+      "preserveSourceHistory": true,
+      "eventScoped": true
+    },
+    "marketing_response_first_email_sent": {
+      "decision": "Remove",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true,
+      "owner": "Event participation",
+      "origin": "ClickUp poslany 1.mail"
+    },
+    "marketing_response_audit_requested": {
+      "decision": "Move",
+      "moveTo": "Form response",
+      "label": "Free audit requested",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "owner": "Form response",
+      "origin": "ClickUp Záujem o vypracovanie auditu zdarma?",
+      "responseViewColumn": true,
+      "responseViewFilter": true,
+      "responseViewGroup": false,
+      "preserveSourceHistory": true
+    },
+    "marketing_response_consultation_requested": {
+      "decision": "Move",
+      "moveTo": "Form response",
+      "label": "Consultation requested",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "owner": "Form response",
+      "origin": "ClickUp KONZULTÁCIA / FREE KONZULTACIA",
+      "responseViewColumn": true,
+      "responseViewFilter": true,
+      "responseViewGroup": false,
+      "preserveSourceHistory": true,
+      "relatedEvent": "Link response to the related Event when applicable; preserve original participation link"
+    },
+    "marketing_response_full_report_requested": {
+      "decision": "Historical only",
+      "label": "Full report requested",
+      "owner": "Form response",
+      "origin": "ClickUp FULL REPORT",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "preserveSourceHistory": true,
+      "eventScoped": true
+    },
+    "marketing_response_heard_about": {
+      "decision": "Move",
+      "moveTo": "Form response",
+      "label": "How they heard about us",
+      "type": "single-choice",
+      "owner": "Form response",
+      "origin": "ClickUp Kde ste sa dozvedeli",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": true,
+      "responseViewGroup": true,
+      "preserveSourceHistory": true,
+      "relatedEvent": "Link to related Event when applicable",
+      "answerScope": "One answer per submission; may differ across submissions"
+    },
+    "marketing_response_offering": {
+      "decision": "Move",
+      "moveTo": "Form response",
+      "label": "What they sell and to whom",
+      "type": "textarea",
+      "owner": "Form response",
+      "origin": "ClickUp Čo predávate a komu",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "eventScoped": true,
+      "populateCompanyDescription": false,
+      "preserveSourceHistory": true
+    },
+    "marketing_response_competitors": {
+      "decision": "Move",
+      "moveTo": "Form response",
+      "label": "Main competitors",
+      "type": "textarea",
+      "owner": "Form response",
+      "origin": "ClickUp 1-3 hlavní konkurenti",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "eventScoped": true,
+      "populateCompanyFields": false,
+      "preserveSourceHistory": true
+    },
+    "marketing_response_audit_brand": {
+      "decision": "Move",
+      "moveTo": "Form response",
+      "label": "Brand to audit",
+      "type": "text",
+      "owner": "Form response",
+      "origin": "ClickUp Akú značku chcete auditovať?",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "eventScoped": true,
+      "populateCompanyFields": false,
+      "preserveSourceHistory": true
+    },
+    "marketing_response_takeaway_goal": {
+      "decision": "Move",
+      "moveTo": "Form response",
+      "label": "Expected takeaway",
+      "type": "textarea",
+      "owner": "Form response",
+      "origin": "ClickUp chcem si odniest",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "eventScoped": true,
+      "populateCompanyFields": false,
+      "preserveSourceHistory": true
+    },
+    "marketing_response_learned": {
+      "decision": "Merge",
+      "mergeInto": "marketing_response_heard_about",
+      "label": "Feedback / learning",
+      "owner": "Form response",
+      "origin": "ClickUp dozvedel som sa",
+      "reason": "Recorded answers indicate discovery source rather than feedback",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "eventScoped": true,
+      "preserveAllAnswers": true,
+      "preserveSubmissionLinks": true,
+      "preserveSourceHistory": true,
+      "conflictHandling": "Retain both original answers when values conflict; do not silently overwrite the single-choice destination"
+    },
+    "marketing_response_interest": {
+      "decision": "Remove",
+      "label": "Reported interest",
+      "owner": "Form response",
+      "origin": "ClickUp INTEREST",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true,
+      "eventScoped": true
+    },
+    "marketing_response_contact_notes": {
+      "decision": "Merge with context review",
+      "mergeInto": "Sales follow-up notes in appropriate record context",
+      "label": "Contact notes",
+      "origin": "ClickUp Kontakt poznámky",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "preserveAllText": true,
+      "preserveSourceHistory": true,
+      "preserveOriginalLinks": true,
+      "contextRule": "Do not assume all imported notes are Event-specific; classify as Contact, Company, Deal, Project, or Form response / Event participation where supported. Leave ambiguous records in original context pending review.",
+      "notesFeature": "Approved contextual Notes",
+      "targetControls": {
+        "column": true,
+        "filter": false,
+        "group": false
+      }
+    },
+    "marketing_response_competition_entered": {
+      "decision": "Move",
+      "moveTo": "Form response",
+      "label": "Competition entered",
+      "type": "boolean",
+      "owner": "Form response",
+      "origin": "ClickUp SÚŤAŽ",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "eventScoped": true,
+      "preserveSourceHistory": true
+    },
+    "marketing_response_source_detail": {
+      "decision": "Remove",
+      "label": "Source detail",
+      "owner": "Form response",
+      "origin": "ClickUp SOURCE",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true
+    },
+    "marketing_response_reported_website": {
+      "decision": "Move",
+      "moveTo": "Form response",
+      "label": "Reported website",
+      "type": "text",
+      "owner": "Form response",
+      "origin": "ClickUp Website",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "eventScoped": true,
+      "populateCompanyFields": false,
+      "preserveSourceHistory": true
+    },
+    "marketing_response_registration_number": {
+      "decision": "Remove",
+      "label": "Reported company registration no.",
+      "owner": "Form response",
+      "origin": "ClickUp ICO",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true,
+      "companyMasterFieldUnchanged": true
+    },
+    "marketing_response_address": {
+      "decision": "Remove",
+      "label": "Reported address",
+      "owner": "Form response",
+      "origin": "ClickUp ADDRESS",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true,
+      "companyMasterFieldUnchanged": true
+    },
+    "marketing_response_quantity": {
+      "decision": "Remove",
+      "label": "Source quantity",
+      "owner": "Imported Event registration / form response",
+      "origin": "ClickUp QUANTITY",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true
+    },
+    "marketing_response_source_total_price": {
+      "decision": "Remove",
+      "label": "Source total price · EUR",
+      "owner": "Imported Event registration / form response",
+      "origin": "ClickUp TOTAL PRICE",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true,
+      "dealAndProjectValuesUnchanged": true
+    },
+    "marketing_response_source_item_price": {
+      "decision": "Remove",
+      "label": "Source item price · EUR",
+      "owner": "Imported Event registration / form response",
+      "origin": "ClickUp ITEM PRICE",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true,
+      "dealAndProjectValuesUnchanged": true
+    },
+    "marketing_response_source_month": {
+      "decision": "Remove",
+      "label": "Source month",
+      "owner": "Imported Event registration / form response",
+      "origin": "ClickUp MONTH",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true,
+      "dateControls": "Use actual Event/submission dates when known; do not infer missing dates from this unconfirmed field"
+    },
+    "marketing_response_lead_form": {
+      "decision": "Replace with relationship",
+      "replaceWith": "Form link on response",
+      "label": "Lead form",
+      "owner": "Form response",
+      "origin": "ClickUp LEAD FORM",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true,
+      "matching": "Use confirmed imported values as evidence for Form matching; leave ambiguous matches unresolved"
+    },
+    "marketing_response_source_notes": {
+      "decision": "Merge with context review",
+      "mergeInto": "Contextual Notes",
+      "label": "Marketing notes",
+      "owner": "Imported Event registration / form response",
+      "origin": "ClickUp Notes",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "preserveAllText": true,
+      "preserveOriginalLinks": true,
+      "preserveSourceHistory": true,
+      "targetControls": {
+        "column": true,
+        "filter": false,
+        "group": false
+      },
+      "attendanceRule": "Do not automatically convert present or similar note text into attendance status without confirmation"
+    },
+    "marketing_response_client_comment": {
+      "decision": "Remove",
+      "label": "Client comment",
+      "owner": "Imported Event registration / form response",
+      "origin": "ClickUp Komentar klienta",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": false,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true
+    },
+    "company_registration_number": {
+      "decision": "Rename",
+      "label": "Company ID",
+      "column": true,
+      "filter": false,
+      "group": false,
+      "owner": "Company",
+      "origin": "ClickUp CLIENTS ICO / consolidated Company registration number",
+      "valueMeaning": "Legal company registration number (IČO), not internal BizBase UUID",
+      "linkedDisplay": true
+    },
+    "company_address": {
+      "decision": "Company card only",
+      "label": "Company address",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "owner": "Company",
+      "origin": "Consolidated ClickUp/Pipedrive Company data",
+      "removeLinkedContactDisplay": true,
+      "retainInCompanyCard": true
+    },
+    "company_website": {
+      "decision": "Company card only",
+      "label": "Company website",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "owner": "Company",
+      "origin": "Consolidated imported Company data",
+      "removeLinkedContactDisplay": true,
+      "retainInCompanyCard": true
+    },
+    "company__src__ClickUp:901515191148__94b893d7-1cb7-4ffa-bfdf-f166f6b01ee0": {
+      "decision": "Company card only",
+      "label": "Company country",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "owner": "Company",
+      "origin": "ClickUp CLIENTS COUNTRY",
+      "removeLinkedContactDisplay": true,
+      "retainInCompanyCard": true,
+      "interpretation": "User answered yes to alternatives; interpreted as Company card only, consistent with preceding address and website choices; explicitly stated to user"
+    },
+    "company__src__Pipedrive:account__owner_id": {
+      "decision": "Company card only",
+      "label": "Company owner",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "owner": "Company",
+      "origin": "Pipedrive Company Owner",
+      "removeLinkedContactDisplay": true,
+      "retainInCompanyCard": true
+    },
+    "marketing_registered_at": {
+      "decision": "Move",
+      "moveTo": "Event-related form response",
+      "label": "Form received on",
+      "type": "date",
+      "owner": "Form response / Event registration",
+      "origin": "Imported registration/submission date when known; not BizBase import date",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "responseViewColumn": true,
+      "responseViewFilter": false,
+      "responseViewGroup": false,
+      "eventScoped": true,
+      "preserveSourceHistory": true,
+      "unknownDate": "Leave blank; do not invent or replace with import date",
+      "distinctFrom": "Contact First received"
+    }
+  },
+  "formResponses": {
+    "decision": "Approved",
+    "separateFromContactAndCompany": true,
+    "separateFromEventParticipation": true,
+    "contactCardSection": "Forms & responses",
+    "contactsSubview": "Responses",
+    "responseFields": [
+      "Form",
+      "Submitted date",
+      "Contact",
+      "Related Event",
+      "Answers"
+    ],
+    "sourcePreservation": "Preserve imported answers and original registration links; do not invent missing submission dates",
+    "contactsTable": {
+      "eventFilter": true,
+      "formFilter": true,
+      "individualFormQuestionsInColumns": false,
+      "individualFormQuestionsInGrouping": false,
+      "individualFormQuestionsInFilters": false
+    },
+    "responsesView": {
+      "selectFormFirst": true,
+      "columnsAndFiltersUseSelectedFormFields": true
+    },
+    "customFields": {
+      "decision": "Approved",
+      "control": "+ Add field",
+      "location": "Selected form in Responses view",
+      "scope": "Form definition; answers belong to individual responses",
+      "purpose": "Create fields for new webinars when needed",
+      "globalContactFields": false
+    },
+    "salesFollowUp": "Actions and notes remain linked to the relevant response or Event participation",
+    "eventRelationship": {
+      "responseEvent": "Optional related Event; required for known Event-specific submissions",
+      "participationLink": "Retain original Event participation link when present",
+      "answerScope": "Answers belong to the individual response; not the Event or Contact master",
+      "genericForms": "General contact forms may have no related Event",
+      "matching": "Preserve supported source links; do not guess an Event for ambiguous submissions"
+    }
+  },
+  "notesReview": {
+    "status": "Approved; recorded for implementation after review",
+    "userRequirement": "Some notes are Contact-specific, some Company-specific, some Deal-specific",
+    "proposal": {
+      "oneNotesFeature": true,
+      "primaryContext": "Contact, Company, Deal, Project, Form response or Event participation",
+      "metadata": [
+        "Author when known",
+        "Original date when known",
+        "Source for imported notes"
+      ],
+      "relatedDisplay": "Show linked context when displaying notes on related records; do not duplicate stored note text",
+      "newNotes": "Default context to the currently open record, with explicit ability to change context",
+      "importedNotes": "Preserve text and original links; do not invent authors/dates or assign ambiguous notes automatically",
+      "salesFollowUpNotes": "Follow-up notes use the same contextual Notes feature rather than one growing text field",
+      "tableControls": "Notes are column only; no filtering or grouping by note content. Exact summary presentation remains an implementation detail."
+    },
+    "controls": {
+      "column": true,
+      "filter": false,
+      "group": false,
+      "scope": "All note fields and contextual Notes across Contact, Company, Deal, Project, Form response and Event participation"
+    }
+  },
+  "companyFieldLabels": {
+    "registration_number": {
+      "label": "Company ID",
+      "valueMeaning": "Legal company registration number (IČO), not internal BizBase UUID",
+      "reason": "User-approved label for Company master value shown on Contacts"
+    }
+  },
+  "companies": {
+    "name": {
+      "decision": "Merge",
+      "label": "Company name",
+      "owner": "Company",
+      "origin": "Consolidated ClickUp/Pipedrive Company names",
+      "mergeFrom": [
+        "name",
+        "trading_name",
+        "legal_name"
+      ],
+      "singleActiveField": true,
+      "preserveSourceHistory": true,
+      "preserveOriginalNames": true,
+      "preferredNameRule": "Approved: confirmed legal name including legal suffix; otherwise existing Company name, then Trading name",
+      "controls": "Not yet explicitly reviewed for the merged Company table field",
+      "preserveLegalSuffix": true
+    },
+    "trading_name": {
+      "decision": "Merge",
+      "mergeInto": "name",
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true
+    },
+    "legal_name": {
+      "decision": "Merge",
+      "mergeInto": "name",
+      "removeFromActiveFields": true,
+      "preserveSourceHistory": true
+    },
+    "received_on": {
+      "decision": "Remove",
+      "label": "First received",
+      "owner": "Company",
+      "origin": "Calculated from imported ClickUp/Pipedrive source timestamps and supported form links",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "removeFromActiveFields": true,
+      "preserveUnderlyingTimestamps": true,
+      "preserveSourceHistory": true
+    },
+    "added_on": {
+      "decision": "Remove",
+      "label": "Added to BizBase",
+      "owner": "Company",
+      "origin": "BizBase insertion/import timestamp",
+      "column": false,
+      "filter": false,
+      "group": false,
+      "removeFromActiveFields": true,
+      "preserveUnderlyingTimestamps": true,
+      "preserveSourceHistory": true
+    },
+    "lead_status": {
+      "decision": "Keep",
+      "label": "Lead status",
+      "owner": "Company",
+      "origin": "BizBase qualification logic, initially classified using imported history",
+      "type": "single-choice",
+      "options": [
+        "New",
+        "SQL",
+        "No Lead"
+      ],
+      "column": true,
+      "filter": true,
+      "group": true,
+      "dealCreationRule": "Creating a Deal sets its Company to SQL",
+      "linkedContactDisplay": "Same Company master value"
+    },
+    "lifecycle": {
+      "decision": "Keep",
+      "label": "Lifecycle",
+      "owner": "Company",
+      "origin": "BizBase classification informed by imported customer history and agreed Deal rules",
+      "type": "single-choice",
+      "options": [
+        "Prospect",
+        "Customer",
+        "Former customer"
+      ],
+      "unassigned": "Blank / Unassigned",
+      "column": true,
+      "filter": true,
+      "group": true,
+      "wonDealRule": "Won Deal makes Company Customer",
+      "formerCustomerRule": "Customer to Former customer remains manual; project completion alone does not downgrade Company"
+    },
+    "roles": {
+      "decision": "Keep",
+      "label": "Business roles",
+      "owner": "Company",
+      "origin": "BizBase classification derived from imported customer/vendor records",
+      "type": "multiple-choice",
+      "options": [
+        "Client",
+        "Vendor",
+        "Partner"
+      ],
+      "column": true,
+      "filter": true,
+      "group": true
+    }
+  },
+  "remainingReview": {
+    "status": "Recommendations prepared, not individually approved",
+    "report": "docs/field-decisions-review-2026-10-27.html",
+    "data": "docs/field-decisions-review-2026-10-27.json",
+    "reviewMethod": "User marks No against exceptions; review only Nos next",
+    "counts": {
+      "fields": 243,
+      "existingFieldEntries": 228,
+      "recommended": 126,
+      "agreed": 117
+    }
+  },
+  "reviewPresentation": {
+    "updated": "2026-11-04",
+    "report": "docs/field-review-simple-2026-11-04.html",
+    "data": "docs/field-review-simple-2026-11-04.json",
+    "sourceSheet": "BizBase fields and values review.xlsx",
+    "rule": "Show each owned field once; nest linked displays; preserve sheet edits; discuss one real ambiguity at a time",
+    "supersedesPresentation": "docs/field-decisions-review-2026-10-27.html",
+    "implementation": "Not yet applied"
+  }
+}

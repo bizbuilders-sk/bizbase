@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+import {companyFacts,companyCandidates,dealCandidates,scopeOverlap,amountEquals} from '../crm-reconciliation-core.mjs';
+const input=process.argv[2],out=process.argv[3];
+if(!input||!out)throw Error('Usage: node scripts/audit-crm-reconciliation.mjs snapshot.json output.json');
+const data=JSON.parse(fs.readFileSync(input,'utf8'));
+const facts=companyFacts(data),pairs=companyCandidates(facts),deals=dealCandidates(data);
+const unmatched=deals.filter(o=>!o.matches.length&&!o.existingProjects.length).map(o=>({...o,crossCompany:data.projects.filter(p=>!p.opportunity_id).map(p=>({id:p.id,name:p.name,value:p.contract_value,company:p.account_id,exactAmount:amountEquals(p.contract_value,o.amount),overlap:scopeOverlap(o.name,p.name)})).filter(p=>p.overlap.length>=2||p.exactAmount&&p.overlap.length).sort((a,b)=>b.overlap.length-a.overlap.length).slice(0,8)}));
+const report={facts,pairs,deals,unmatched,counts:{companies:data.accounts.length,contacts:data.contacts.length,projects:data.projects.length,deals:data.deals.length,won:deals.length,companyCandidates:pairs.length,wonWithoutAnySameCompanyProjects:unmatched.length}};
+fs.writeFileSync(out,JSON.stringify(report,null,2),{mode:0o600});
+console.log(JSON.stringify({counts:report.counts,pairs,unmatched:unmatched.map(o=>({name:o.name,company:facts.find(a=>a.id===o.company)?.name,value:o.amount,candidates:o.crossCompany.map(p=>({...p,company:facts.find(a=>a.id===p.company)?.name}))}))},null,2));

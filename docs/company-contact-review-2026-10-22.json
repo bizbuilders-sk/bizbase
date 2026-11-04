@@ -1,0 +1,627 @@
+{
+  "date": "2026-10-22",
+  "source": "User-edited BizBase entity and field review.xlsx",
+  "scope": "Company and Contact definitions and components; no source-system or database record writes",
+  "changes": [
+    {
+      "sheet": "Entity fields",
+      "row": 8,
+      "table": "accounts",
+      "key": "received_on",
+      "label": "First received",
+      "diffs": [
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 9,
+      "table": "accounts",
+      "key": "added_on",
+      "label": "Added to BizBase",
+      "diffs": [
+        {
+          "column": "Column",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 12,
+      "table": "accounts",
+      "key": "contacts_count",
+      "label": "Contacts",
+      "diffs": [
+        {
+          "column": "Column",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        },
+        {
+          "column": "Note",
+          "before": "",
+          "after": "This is completely irrelevant, should not be a field at all"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 13,
+      "table": "accounts",
+      "key": "industry",
+      "label": "Industry",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Review"
+        },
+        {
+          "column": "Note",
+          "before": "",
+          "after": "This should be choice, if there's nothing predefined in CU or PD, remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 14,
+      "table": "accounts",
+      "key": "company_size",
+      "label": "Company size",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Review"
+        },
+        {
+          "column": "Note",
+          "before": "",
+          "after": "hide in a collapsed group called TBD in dropdowns"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 16,
+      "table": "accounts",
+      "key": "finstat_url",
+      "label": "FinStat URL",
+      "diffs": [
+        {
+          "column": "Column",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Review"
+        },
+        {
+          "column": "Note",
+          "before": "",
+          "after": "in the company card only (company card is the modal that opens with company details)"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 17,
+      "table": "accounts",
+      "key": "qualification_status",
+      "label": "Company fit",
+      "diffs": [
+        {
+          "column": "Column",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Group",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 18,
+      "table": "accounts",
+      "key": "qualification_score",
+      "label": "Company fit score",
+      "diffs": [
+        {
+          "column": "Column",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 19,
+      "table": "accounts",
+      "key": "qualification_notes",
+      "label": "Company fit notes",
+      "diffs": [
+        {
+          "column": "Column",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 20,
+      "table": "accounts",
+      "key": "source",
+      "label": "Original source",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 21,
+      "table": "accounts",
+      "key": "source_system",
+      "label": "Source system",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 22,
+      "table": "accounts",
+      "key": "acquisition_channel",
+      "label": "Acquisition channel",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 23,
+      "table": "accounts",
+      "key": "registration_number",
+      "label": "Company registration no.",
+      "diffs": [
+        {
+          "column": "Column",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Review"
+        },
+        {
+          "column": "Note",
+          "before": "",
+          "after": "company card only"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 24,
+      "table": "accounts",
+      "key": "address",
+      "label": "Address",
+      "diffs": [
+        {
+          "column": "Column",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Review"
+        },
+        {
+          "column": "Note",
+          "before": "",
+          "after": "company card only"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 25,
+      "table": "accounts",
+      "key": "revenue_band",
+      "label": "Company revenue range",
+      "diffs": [
+        {
+          "column": "Column",
+          "before": "Yes",
+          "after": "No"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 26,
+      "table": "accounts",
+      "key": "data_quality_status",
+      "label": "Data quality",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 27,
+      "table": "accounts",
+      "key": "src__ClickUp:901515191148__tags",
+      "label": "Company tags · ClickUp",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 28,
+      "table": "accounts",
+      "key": "src__ClickUp:901515191148__3afb002d-e269-4ba0-a775-ca01b121e446",
+      "label": "Company city",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 29,
+      "table": "accounts",
+      "key": "src__ClickUp:901515191148__7dd6aa04-ee13-4448-bc4a-bce8d7182d08",
+      "label": "Invoice email",
+      "diffs": [
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 31,
+      "table": "accounts",
+      "key": "src__ClickUp:901515197551__7dd6aa04-ee13-4448-bc4a-bce8d7182d08",
+      "label": "Vendor invoice email",
+      "diffs": [
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Review"
+        },
+        {
+          "column": "Note",
+          "before": "",
+          "after": "Merge with Invoice email"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 34,
+      "table": "accounts",
+      "key": "src__Pipedrive:account__owner_id",
+      "label": "Company owner · Pipedrive",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Review"
+        },
+        {
+          "column": "Type",
+          "before": "Multiple choices",
+          "after": "Choice"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 37,
+      "table": "contacts",
+      "key": "received_on",
+      "label": "First received",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 38,
+      "table": "contacts",
+      "key": "added_on",
+      "label": "Added to BizBase",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 41,
+      "table": "contacts",
+      "key": "email",
+      "label": "Email",
+      "diffs": [
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 42,
+      "table": "contacts",
+      "key": "phone",
+      "label": "Phone",
+      "diffs": [
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 43,
+      "table": "contacts",
+      "key": "source_system",
+      "label": "Source system",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 44,
+      "table": "contacts",
+      "key": "is_primary",
+      "label": "Primary contact",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 45,
+      "table": "contacts",
+      "key": "notes",
+      "label": "Summary note",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 46,
+      "table": "contacts",
+      "key": "src__Pipedrive:contact__activities_count",
+      "label": "Imported total activities",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 47,
+      "table": "contacts",
+      "key": "src__Pipedrive:contact__done_activities_count",
+      "label": "Imported done activities",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 48,
+      "table": "contacts",
+      "key": "src__Pipedrive:contact__last_activity_date",
+      "label": "Imported last activity",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 49,
+      "table": "contacts",
+      "key": "src__Pipedrive:contact__next_activity_date",
+      "label": "Imported next activity",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 50,
+      "table": "contacts",
+      "key": "src__Pipedrive:contact__owner_id",
+      "label": "Contact owner · Pipedrive",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 51,
+      "table": "contacts",
+      "key": "src__Pipedrive:contact__undone_activities_count",
+      "label": "Imported activities to do",
+      "diffs": [
+        {
+          "column": "Decision",
+          "before": "Keep",
+          "after": "Remove"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 52,
+      "table": "contacts",
+      "key": "src__Pipedrive:contact__email",
+      "label": "Imported email addresses",
+      "diffs": [
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        },
+        {
+          "column": "Note",
+          "before": "",
+          "after": "Merge with email line 41"
+        }
+      ]
+    },
+    {
+      "sheet": "Entity fields",
+      "row": 53,
+      "table": "contacts",
+      "key": "src__Pipedrive:contact__phone",
+      "label": "Imported phone numbers",
+      "diffs": [
+        {
+          "column": "Filter",
+          "before": "Yes",
+          "after": "No"
+        }
+      ]
+    }
+  ],
+  "salesModel": {
+    "company": "Ongoing business relationship",
+    "deal": "One potential purchase, with its own stage and outcome",
+    "project": "Delivery of accepted work",
+    "companyOverview": "Group Deals by Company; retain every individual Deal and its history"
+  }
+}

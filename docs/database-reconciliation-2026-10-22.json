@@ -1,0 +1,104 @@
+{
+  "audit": {
+    "merges": 22,
+    "unresolved": {
+      "unresolved_won": [
+        {
+          "id": "f4dd14b6-646b-19b5-eda3-925819f05a0d",
+          "name": "Follow-up",
+          "amount": 6000,
+          "reason": "Multiple or incompatible original delivery scopes; human confirmation required.",
+          "company": "avin s. r. o."
+        },
+        {
+          "id": "1c88302a-efeb-3180-c4b7-74c7e510ce43",
+          "name": "Follow-up po stratégii 1. fáza",
+          "amount": 7500,
+          "reason": "Multiple or incompatible original delivery scopes; human confirmation required.",
+          "company": "SYNAPSIS, s.r.o."
+        }
+      ],
+      "conflicting_company_facts": []
+    },
+    "links_added": 67,
+    "counts_after": {
+      "deals": 303,
+      "accounts": 771,
+      "contacts": 750,
+      "projects": 276,
+      "linked_projects": 69,
+      "won_without_project": 2
+    },
+    "facts_backfilled": 229,
+    "financials_unchanged": true,
+    "source_snapshots_unchanged": true
+  },
+  "coverage": {
+    "source_contacts": 635,
+    "source_cost_rows": 427,
+    "working_invoices": 0,
+    "working_payments": 0,
+    "source_revenue_rows": 1276,
+    "source_organizations": 596,
+    "unknown_project_groups": 205,
+    "missing_contract_values": 181,
+    "source_identity_orphans": 0,
+    "missing_project_companies": 2
+  },
+  "unlinked_won": [
+    {
+      "id": "1c88302a-efeb-3180-c4b7-74c7e510ce43",
+      "name": "Follow-up po stratégii 1. fáza",
+      "amount": 7500,
+      "company": "SYNAPSIS, s.r.o."
+    },
+    {
+      "id": "f4dd14b6-646b-19b5-eda3-925819f05a0d",
+      "name": "Follow-up",
+      "amount": 6000,
+      "company": "avin s. r. o."
+    }
+  ],
+  "master_fact_counts": {
+    "legal_names": 101,
+    "trading_names": 229,
+    "registration_numbers": 98
+  },
+  "cross_company_links": [
+    {
+      "deal": "Drienova 33, Parkovaci dom",
+      "project": "Drienova 33, Parkovaci dom",
+      "sales_company": "SYNAPSIS, s.r.o.",
+      "delivery_company": "DRIENOVA 33"
+    }
+  ],
+  "confirmed_followups": [
+    {
+      "event": "done-deal-confirmed-2026-10-22-v1",
+      "date": "2026-10-22",
+      "company": "Done Deal s. r. o.",
+      "legal_name": "Done Deal s. r. o.",
+      "legal_name_basis": "Existing source company name retained on user confirmation; registration not verified.",
+      "trading_name": "DONE DEAL (Earrings)",
+      "former_names": [
+        "Done Deal (Prve nausnicky)",
+        "Done Deal (Earrings s.r.o.)",
+        "Earring s.r.o. (Prve nausnicky)"
+      ],
+      "company_merges": 3,
+      "source_aliases_retained": 5,
+      "contacts_retained": 2,
+      "deals_retained": 2,
+      "projects_retained": 1,
+      "preservation_verified": true,
+      "idempotency_verified": true,
+      "counts_after": {
+        "accounts": 768,
+        "contacts": 750,
+        "projects": 276,
+        "deals": 303,
+        "won_without_project": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+import {PGlite} from '@electric-sql/pglite';
+import {readFileSync,readdirSync} from 'node:fs';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+const root=new URL('../',import.meta.url);
+test('source projection follows canonical aliases, overlays only the read-only snapshot, and respects staff RLS',{timeout:30000},async()=>{
+ const db=new PGlite();
+ await db.exec(`create role anon;create role authenticated;create schema auth;create table auth.users(id uuid primary key,email text,raw_user_meta_data jsonb default '{}');create function auth.uid() returns uuid language sql stable as $$select nullif(current_setting('request.jwt.claim.sub',true),'')::uuid$$;grant usage on schema auth to anon,authenticated;grant execute on function auth.uid() to anon,authenticated;`);
+ for(const file of readdirSync(new URL('supabase/migrations/',root)).filter(f=>f.endsWith('.sql')).sort())await db.exec(readFileSync(new URL('supabase/migrations/'+file,root),'utf8').replace(/create extension if not exists pgcrypto;/g,''));
+ await db.exec(`insert into auth.users(id,email) values('00000000-0000-0000-0000-000000000001','staff@example.test');insert into public.workspace_members(user_id) values('00000000-0000-0000-0000-000000000001');
+ insert into public.accounts(id,name,kind) values('00000000-0000-0000-0000-000000000010','Company','Client');
+ insert into public.contacts(id,first_name,source_external_id) values('00000000-0000-0000-0000-000000000020','Working name','Pipedrive:person:1');
+ insert into public.source_identity_map values('contact','Pipedrive:person:2','00000000-0000-0000-0000-000000000020',now());
+ insert into public.migration_staging(source_system,source_record_id,record_type,raw_record) values('Pipedrive','1','contact','{"name":"Source name","owner_id":7}'),('Pipedrive','2','contact','{"name":"Second name","owner_id":8}');
+ insert into public.integration_events(integration,external_event_id,direction,status,payload) values('source_parameter_snapshot','pipedrive-person-parameters-v1','Inbound','Processed','{"persons":{"1":{"activities_count":5}}}');`);
+ const before=(await db.query('select raw_record from public.migration_staging order by source_record_id')).rows;
+ await db.exec(`set request.jwt.claim.sub='00000000-0000-0000-0000-000000000001';set role authenticated;`);
+ const projection=(await db.query('select * from public.crm_source_parameters order by source_external_id')).rows;
+ assert.equal(projection.length,2);assert.equal(projection[0].canonical_id,projection[1].canonical_id);
+ assert.equal(projection[0].raw_record.activities_count,5);assert.equal(projection[1].raw_record.activities_count,undefined);
+ await assert.rejects(()=>db.exec(`update public.crm_source_parameters set source_external_id='tampered'`),/permission denied|not automatically updatable|cannot update view/);
+ assert.equal((await db.query('select first_name from public.contacts')).rows[0].first_name,'Working name');
+ assert.deepEqual((await db.query('select raw_record from public.migration_staging order by source_record_id')).rows,before);
+ await db.exec(`reset role;set request.jwt.claim.sub='00000000-0000-0000-0000-000000000099';set role authenticated;`);
+ assert.equal((await db.query('select * from public.crm_source_parameters')).rows.length,0);
+ await db.exec('reset role;set role anon;');await assert.rejects(()=>db.query('select * from public.crm_source_parameters'),/permission denied/);
+ await db.close();
+});

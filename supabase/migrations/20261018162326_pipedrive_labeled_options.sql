@@ -1,0 +1,10 @@
+-- Pipedrive option values can be IDs or labeled {id,label} objects.
+update public.opportunities o
+set custom_fields=o.custom_fields || jsonb_build_object(
+ 'product',case when coalesce(o.custom_fields->'product','[]'::jsonb)='[]'::jsonb then (select coalesce(jsonb_agg(coalesce(selected.value->>'label',opt.label)) filter(where coalesce(selected.value->>'label',opt.label) is not null),'[]'::jsonb) from jsonb_array_elements(case when jsonb_typeof(s.raw_record->'custom_fields'->'223d9d6282a53a613db109f9e709fd147b25bb76')='array' then s.raw_record->'custom_fields'->'223d9d6282a53a613db109f9e709fd147b25bb76' else '[]'::jsonb end) selected(value) left join (values ('34','SOLUTION SPRINT'),('44','POZICIONING'),('32','MARKETINGOVÁ STRATÉGIA'),('74','PLÁN RASTU (FINANCIE + MARKETING)'),('41','NASTAVENIE OBCHODU'),('33','MARKETINGOVÝ AKCELERÁTOR'),('75','KVANTITATÍVNY PRIESKUM')) opt(id,label) on opt.id=coalesce(selected.value->>'id',selected.value#>>'{}')) else o.custom_fields->'product' end,
+ 'revenue_band',coalesce(o.custom_fields->>'revenue_band',coalesce((s.raw_record->'custom_fields'->'8cde75b171dc180736dfb772cbf428479c4d53da')->>'label',case coalesce((s.raw_record->'custom_fields'->'8cde75b171dc180736dfb772cbf428479c4d53da')->>'id',(s.raw_record->'custom_fields'->'8cde75b171dc180736dfb772cbf428479c4d53da')#>>'{}') when '49' then '< 100 000' when '50' then '100 000 - 250 000' when '51' then '250 000 - 500 000' when '52' then '500 000 - 1 000 000' when '54' then '1 000 000 +' end)),
+ 'deal_type',coalesce(o.custom_fields->>'deal_type',coalesce((s.raw_record->'custom_fields'->'2010e349aef5cdd716fdbf7a040b8e2b211788ba')->>'label',case coalesce((s.raw_record->'custom_fields'->'2010e349aef5cdd716fdbf7a040b8e2b211788ba')->>'id',(s.raw_record->'custom_fields'->'2010e349aef5cdd716fdbf7a040b8e2b211788ba')#>>'{}') when '59' then 'Nový obchod' when '60' then 'Follow-up' end))
+)
+from public.migration_staging s
+where s.source_system='Pipedrive' and s.record_type='opportunity' and o.source_external_id='Pipedrive:deal:'||s.source_record_id;
+
