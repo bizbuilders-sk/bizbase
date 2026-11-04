@@ -39,6 +39,32 @@ To undo any of these, add or remove the key in `TABLE_CONTROLS.accounts`.
 - **Enquiries** weren't in the review. Only the fields retired everywhere were removed there.
 - Items the review listed as "Source / internal detail" (e.g. *First received*, *Added to BizBase*) are unchanged.
 
+## Field order (4 November 2026)
+
+Decided from common CRM practice (Pipedrive/HubSpot pattern): the most important field first, at most about 8 default columns, and record cards in the order key fields → relationships → details, with context and imported/system fields collapsed.
+
+**Default table columns**, in order. Everything else stays in the Columns picker.
+
+| Table | Default columns |
+|---|---|
+| Contacts | First name, Last name, Company, Job title, Email, Phone, Company lead status, Sales follow-up |
+| Companies | Company name, Lead status, Lifecycle, Industry, Business roles, First received, Sales follow-up |
+| Deals | Deal, Company, Contact, Stage, Deal value, Expected close, Next activity, Sales owner |
+| Projects | Project, Company, Phase, Group, Contract, Start, End, Project owner |
+
+Everyone's saved column layout was reset to these defaults once. Filters, sorting and grouping were kept.
+
+**Record cards**, section by section (collapsed sections in *italics*):
+
+- **Deal:** Deal (stage, value, probability, expected close, next activity, owner; lost reason only for lost deals) → Company & contact → Scope → *Company details* → *Imported & system*
+- **Project:** Project (phase, group, owner, contract, dates) → Client → Links → *Company details* → *Imported & system*
+- **Company:** Company → Facts → *Names* → *Record info*
+- **Contact:** one section (name, job title, company, email, phone)
+
+**Lists inside a card** (e.g. a Contact's Deals) always open unfiltered, so the card's counts and its lists agree. The main Deals screen still opens on Open deals.
+
+**To change any of this,** edit `TABLE_CONTROLS` (`columns` order and `visible`) or `CARD_LAYOUT` in `src/table-field-policy.ts`. To push a new default column order to everyone's saved layouts, bump `LAYOUT_VERSION` in `src/workspace-model.ts`.
+
 ## Not done: features, not field settings
 
 These came up in the review but are new features. Each should be built on its own when it becomes a priority, not reopened as a review:

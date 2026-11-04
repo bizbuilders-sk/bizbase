@@ -64,7 +64,7 @@ test('receipt history survives the reviewed screen controls and new columns resp
  assert.ok(!DEFINITIONS.contacts.fields.some(f=>f.derived==='received_on'));
  assert.ok(!tableFilterFields('accounts').some(f=>f.key==='received_on'));
  const known=DEFINITIONS.accounts.fields.filter(f=>!['received_on','added_on'].includes(f.key)).map(f=>f.key);
- const pref=restoreView({knownKeys:known,columnOrder:['industry','name',...known.filter(k=>!['industry','name'].includes(k))],visibleKeys:['industry','name'],sortKey:'industry'},'accounts');
+ const pref=restoreView({layoutVersion:2,knownKeys:known,columnOrder:['industry','name',...known.filter(k=>!['industry','name'].includes(k))],visibleKeys:['industry','name'],sortKey:'industry'},'accounts');
  assert.ok(pref.visibleKeys.includes('received_on'));assert.equal(pref.columnOrder[pref.columnOrder.indexOf('name')+1],'received_on');assert.equal(pref.columnOrder[0],'industry');assert.equal(pref.sortKey,'industry');
  const hidden=restoreView({...pref,visibleKeys:['name']},'accounts');assert.ok(!hidden.visibleKeys.includes('received_on'));
  const original={...company,...DEFINITIONS.accounts.defaults};assert.deepEqual(recordPatch('accounts',{...original,received_on:'2000-01-01',added_on:'2000-01-01'},original),{});

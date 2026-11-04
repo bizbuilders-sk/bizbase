@@ -43,7 +43,7 @@ test('parent relationships are removed from columns, filters and grouping inside
 
 test('retired table fields cannot reappear through saved layouts; valid filters, order and hidden columns survive',()=>{
  const fields=DEFINITIONS.projects.fields.map(f=>f.key);
- const saved=restoreView({knownKeys:fields,visibleKeys:['name','company_address','agreement_id'],columnOrder:['company_address','name','contract_value','agreement_id'],sortKey:'company_address',listGroupBy:'company_lifecycle',groupBy:'company_lifecycle',filterMode:'any',filters:[{id:'retired',field:'company_address',operator:'contains',value:'Street'},{id:'keep',field:'owner_id',operator:'not_empty',value:''}]},'projects');
+ const saved=restoreView({layoutVersion:2,knownKeys:fields,visibleKeys:['name','company_address','agreement_id'],columnOrder:['company_address','name','contract_value','agreement_id'],sortKey:'company_address',listGroupBy:'company_lifecycle',groupBy:'company_lifecycle',filterMode:'any',filters:[{id:'retired',field:'company_address',operator:'contains',value:'Street'},{id:'keep',field:'owner_id',operator:'not_empty',value:''}]},'projects');
  assert.deepEqual(saved.visibleKeys,['name']);assert.equal(saved.columnOrder[0],'name');assert.equal(saved.columnOrder[1],'contract_value');
  assert.equal(saved.sortKey,'name');assert.equal(saved.listGroupBy,'');assert.equal(saved.groupBy,'status');assert.equal(saved.filterMode,'any');assert.deepEqual(saved.filters.map(f=>f.id),['keep']);
  assert.ok(!saved.visibleKeys.includes('contract_value'),'a useful column hidden by the user stays hidden');

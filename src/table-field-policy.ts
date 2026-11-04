@@ -20,20 +20,28 @@ const registrationFilters = ['follow_up','response_audit_requested','response_co
 const registrationGroups = ['follow_up','response_heard_about','response_source_detail','response_lead_form'];
 const responses = (keys:string[]) => keys.map(key=>'marketing_'+key);
 const without = (keys:string[],drop:string[]) => keys.filter(key=>!drop.includes(key));
-export type TableControls = {columns:string[];filter:string[];group:string[]};
+// columns: the order shown in tables and the Columns picker (defaults first).
+// visible: the columns a table shows by default (about 8 at most); the rest
+// stay available in the Columns picker. Change LAYOUT_VERSION in
+// workspace-model.ts to push a new default order to existing saved layouts.
+export type TableControls = {columns:string[];filter:string[];group:string[];visible?:string[]};
 export const TABLE_CONTROLS:Record<TableName,TableControls> = {
  accounts:{
-  columns:['name','received_on','lead_status','lifecycle','roles','industry','registration_number','event_ids',...responses(without(responseColumns,['registered_at']))],
+  visible:['name','lead_status','lifecycle','industry','roles','received_on','marketing_follow_up'],
+  columns:['name','lead_status','lifecycle','industry','roles','received_on','marketing_follow_up','registration_number','event_ids',...responses(without(responseColumns,['follow_up','registered_at']))],
   filter:['lead_status','lifecycle','roles','industry','revenue_band','event_ids',...responses(without(responseFilters,['registered_at']))],
   group:['lead_status','lifecycle','roles','industry','revenue_band','event_ids',...responses(responseGroups)],
  },
  contacts:{
-  columns:['first_name','last_name','account_id','role_title','email','phone','company_industry','company_registration_number','company_lead_status','company_lifecycle','event_ids',...responses(responseColumns)],
+  visible:['first_name','last_name','account_id','role_title','email','phone','company_lead_status','marketing_follow_up'],
+  columns:['first_name','last_name','account_id','role_title','email','phone','company_lead_status','marketing_follow_up','event_ids',...responses(['registered_at','response_follow_up_notes','response_heard_about','response_audit_requested','response_consultation_requested','response_dc_notes']),'company_lifecycle','company_industry','company_registration_number'],
   filter:['last_name','account_id','role_title','email','phone','company_industry','company_revenue_band','company_lead_status','company_lifecycle','company_roles','event_ids',...responses(responseFilters)],
   group:['company_industry','company_revenue_band','company_lead_status','company_lifecycle','company_roles','event_ids',...responses(responseGroups)],
  },
  opportunities:{
-  columns:['name','received_on','added_on','account_id','primary_contact_id','contact_email','contact_phone','proposed_services','deal_type','stage','amount','probability','expected_close','next_activity','owner_id','lost_reason','acquisition_channel','company_industry','notes','source_system'],
+  // Probability is hidden by default: it follows the stage.
+  visible:['name','account_id','primary_contact_id','stage','amount','expected_close','next_activity','owner_id'],
+  columns:['name','account_id','primary_contact_id','stage','amount','expected_close','next_activity','owner_id','probability','proposed_services','deal_type','acquisition_channel','lost_reason','contact_email','contact_phone','company_industry','received_on','added_on','source_system','notes'],
   // Company stays a filter/grouping: the Deals "By company" button depends on it.
   filter:['stage','owner_id','account_id','proposed_services','deal_type','acquisition_channel','company_industry','company_revenue_band','probability','expected_close','next_activity','lost_reason','source_system','received_on','added_on'],
   group:['stage','owner_id','account_id','proposed_services','deal_type','acquisition_channel','company_industry','company_revenue_band','lost_reason'],
@@ -45,7 +53,8 @@ export const TABLE_CONTROLS:Record<TableName,TableControls> = {
  },
  projects:{
   // Revenue plan / vendor budget totals: Project card only (decided 4 Nov 2026).
-  columns:['name','received_on','added_on','account_id','project_group','status','contract_value','start_date','end_date','owner_id','primary_contact_id','contact_email','contact_phone'],
+  visible:['name','account_id','status','project_group','contract_value','start_date','end_date','owner_id'],
+  columns:['name','account_id','status','project_group','contract_value','start_date','end_date','owner_id','primary_contact_id','contact_email','contact_phone','received_on','added_on'],
   filter:['status','project_group','owner_id','account_id','opportunity_id','primary_contact_id','start_date','end_date','received_on','added_on'],
   group:['status','project_group','owner_id','account_id'],
  },
@@ -63,6 +72,38 @@ export const TABLE_CONTROLS:Record<TableName,TableControls> = {
   filter:['event_id','contact_id',...registrationFilters],
   group:['event_id',...registrationGroups],
  },
+};
+
+// Record card (Details tab) layout: key fields first, then relationships, then
+// details; context and imported/system fields are collapsed. Whether a field
+// appears at all is still decided by the card (e.g. linked fields need a value).
+// Fields shown by the card but not listed here land in a collapsed "Other details".
+export type CardSectionSpec = {title:string;keys:string[];collapsed?:boolean};
+const companyContext = ['company_lifecycle','company_roles','company_industry','company_registration_number','company_website','company_address','company_size','company_revenue_band'];
+export const CARD_LAYOUT:Partial<Record<TableName,CardSectionSpec[]>> = {
+ contacts:[
+  {title:'Contact',keys:['first_name','last_name','role_title','account_id','email','phone','event_ids']},
+ ],
+ accounts:[
+  {title:'Company',keys:['name','lead_status','lifecycle','roles','industry','event_ids']},
+  {title:'Facts',keys:['registration_number','website','address','company_size','revenue_band','invoice_emails','finstat_url']},
+  {title:'Names',keys:['trading_name','legal_name'],collapsed:true},
+  {title:'Record info',keys:['received_on','added_on'],collapsed:true},
+ ],
+ opportunities:[
+  {title:'Deal',keys:['name','stage','amount','probability','expected_close','next_activity','owner_id','lost_reason']},
+  {title:'Company & contact',keys:['account_id','primary_contact_id','contact_email','contact_phone','company_lead_status']},
+  {title:'Scope',keys:['proposed_services','deal_type','acquisition_channel','notes']},
+  {title:'Company details',keys:companyContext,collapsed:true},
+  {title:'Imported & system',keys:['received_on','added_on','source_system','source','deal_labels','deal_product','deal_revenue_band','deal_channel','deal_imported_notes'],collapsed:true},
+ ],
+ projects:[
+  {title:'Project',keys:['name','status','project_group','owner_id','contract_value','start_date','end_date']},
+  {title:'Client',keys:['account_id','primary_contact_id','contact_email','contact_phone','company_lead_status']},
+  {title:'Links',keys:['opportunity_id','agreement_id']},
+  {title:'Company details',keys:companyContext,collapsed:true},
+  {title:'Imported & system',keys:['received_on','added_on','source_system','data_quality_status'],collapsed:true},
+ ],
 };
 
 type SourcePolicy={label:string;section:string;filter:boolean;group:boolean};

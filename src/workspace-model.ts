@@ -1,4 +1,4 @@
-import {TABLE_CONTROLS,sourceControlPolicy,controlSection} from './table-field-policy.ts';
+import {TABLE_CONTROLS,CARD_LAYOUT,sourceControlPolicy,controlSection} from './table-field-policy.ts';
 import {COMPANY_INDUSTRIES,companyIndustry} from './company-industry.ts';
 import {firstReceivedAt,receivedCalendarDate} from './received-dates.ts';
 import {sourceParameterRecords,sourceParameterValues} from './source-parameters.ts';
@@ -252,7 +252,31 @@ export function recordPatch(table: TableName, draft: Row, original?: Row): Recor
 export type FilterOperator = 'eq' | 'neq' | 'contains' | 'not_contains' | 'gt' | 'gte' | 'lt' | 'lte' | 'before' | 'after' | 'on_or_before' | 'on_or_after' | 'empty' | 'not_empty';
 export type FilterRule = { id: string; field: string; operator: FilterOperator; value: string };
 export type FilterMode = 'all' | 'any';
-export type ViewPreference = { view: 'list' | 'kanban'; groupBy: string; listGroupBy: string; filters: FilterRule[]; filterMode: FilterMode; visibleKeys: string[]; columnOrder: string[]; knownKeys: string[]; sortKey: string; ascending: boolean; filter: string; eventId:string };
+export type ViewPreference = { view: 'list' | 'kanban'; groupBy: string; listGroupBy: string; filters: FilterRule[]; filterMode: FilterMode; visibleKeys: string[]; columnOrder: string[]; knownKeys: string[]; sortKey: string; ascending: boolean; filter: string; eventId:string; layoutVersion?:number };
+// Bump to reset everyone's saved column order/visibility once to the defaults
+// in TABLE_CONTROLS (filters, sorting and grouping are kept).
+export const LAYOUT_VERSION = 2;
+export function isDefaultColumn(table:TableName,field:Field):boolean {
+  const defaults=TABLE_CONTROLS[table].visible;
+  return defaults?defaults.includes(field.key):field.visible!==false;
+}
+export type CardSection={title:string;fields:Field[];collapsed:boolean;open:boolean};
+// Groups the card's fields by CARD_LAYOUT. Nothing the card shows is dropped:
+// unlisted fields go to a collapsed "Other details". A collapsed section opens
+// when it holds an empty required field, so saving can never fail out of sight.
+export function cardSections(table:TableName,fields:Field[],row:Row):CardSection[] {
+  const layout=CARD_LAYOUT[table];
+  const shown=table==='opportunities'?fields.filter(field=>field.key!=='lost_reason'||row.stage==='Lost'||Boolean(row.lost_reason)):fields;
+  if(!layout)return [{title:'Details',fields:shown,collapsed:false,open:true}];
+  const used=new Set<string>();
+  const specs=[...layout,{title:'Other details',keys:shown.map(field=>field.key),collapsed:true}];
+  return specs.map(spec=>{
+    const sectionFields=spec.keys.map(key=>shown.find(field=>field.key===key&&!used.has(key))).filter((field):field is Field=>Boolean(field));
+    sectionFields.forEach(field=>used.add(field.key));
+    const missing=sectionFields.some(field=>field.required&&(row[field.key]===undefined||row[field.key]===null||row[field.key]===''));
+    return {title:spec.title,fields:sectionFields,collapsed:Boolean(spec.collapsed),open:!spec.collapsed||missing};
+  }).filter(section=>section.fields.length>0);
+}
 export function reorderColumns(order: string[], source: string, target: string): string[] {
   const from = order.indexOf(source), to = order.indexOf(target);
   if (from < 0 || to < 0 || from === to) return order;
@@ -451,15 +475,20 @@ export function restoreView(value: Partial<ViewPreference> | null, table: TableN
     return match?{...rule,value:match.id}:rule;
   })};
   const def = DEFINITIONS[table]; const fields=tableColumnFields(table,bindingKey); const keys = fields.map((field) => field.key);
+  // A layout saved before LAYOUT_VERSION gets the current default columns once.
+  if(value&&Array.isArray(value.knownKeys)&&(value.layoutVersion||0)<LAYOUT_VERSION)value={...value,knownKeys:undefined,visibleKeys:undefined,columnOrder:undefined};
+  const isDefault=(field:Field)=>isDefaultColumn(table,field);
   const known = Array.isArray(value?.knownKeys) ? value.knownKeys : keys;
-  const visible = Array.isArray(value?.visibleKeys) ? value.visibleKeys.map((key) => key === 'account_name' && keys.includes('account_id') ? 'account_id' : key).filter((key) => keys.includes(key)) : fields.filter((field) => field.visible !== false).map((field) => field.key);
-  if(value?.visibleKeys?.length&&!visible.length)visible.push(...fields.filter(field=>field.visible!==false).map(field=>field.key));
-  const newVisible = fields.filter((field) => field.visible !== false && !known.includes(field.key)).map((field) => field.key);
+  const visible = Array.isArray(value?.visibleKeys) ? value.visibleKeys.map((key) => key === 'account_name' && keys.includes('account_id') ? 'account_id' : key).filter((key) => keys.includes(key)) : fields.filter(isDefault).map((field) => field.key);
+  if(value?.visibleKeys?.length&&!visible.length)visible.push(...fields.filter(isDefault).map(field=>field.key));
+  const newVisible = fields.filter((field) => isDefault(field) && !known.includes(field.key)).map((field) => field.key);
   const grouped = groupFields(table,bindingKey);
   const columnOrder = [...new Set([...(Array.isArray(value?.columnOrder) ? value.columnOrder : keys).map(key => key === 'account_name' && keys.includes('account_id') ? 'account_id' : key).filter(key => keys.includes(key)),...keys])];
   if(keys.includes('received_on')&&!known.includes('received_on')){const at=columnOrder.indexOf('received_on');columnOrder.splice(at,1);const anchor=table==='contacts'?'last_name':def.fields[0].key;columnOrder.splice(columnOrder.indexOf(anchor)+1,0,'received_on');}
-  const filters: FilterRule[] = Array.isArray(value?.filters) ? value.filters.filter(rule => rule && typeof rule.id === 'string' && typeof rule.value === 'string' && tableFilterFields(table,bindingKey).some(field => field.key === rule.field && filterOperators(field).some(operator => operator.value === rule.operator))).slice(0,20) : [];
-  return { view: value?.view === 'kanban' ? 'kanban' : 'list', groupBy: grouped.some((field) => field.key === value?.groupBy) ? value!.groupBy! : grouped.find(field=>field.key===def.groupBy)?.key||grouped[0]?.key||'', listGroupBy: grouped.some(field => field.key === value?.listGroupBy) ? value!.listGroupBy! : '', filters, filterMode: value?.filterMode === 'any' ? 'any' : 'all', visibleKeys: [...new Set([...visible,...newVisible])], columnOrder, knownKeys: keys, sortKey: keys.includes(value?.sortKey || '') ? value!.sortKey! : keys[0], ascending: value?.ascending !== false, filter: value?.filter || (table === 'opportunities' ? 'Open' : 'All'), eventId:bindingKey==='event_id'?'':typeof value?.eventId==='string'?value.eventId:'' };
+  // Lists inside a record card always show the record's full history, so the
+  // card's counts and its lists agree. Only main screens keep saved filters.
+  const filters: FilterRule[] = !bindingKey && Array.isArray(value?.filters) ? value.filters.filter(rule => rule && typeof rule.id === 'string' && typeof rule.value === 'string' && tableFilterFields(table,bindingKey).some(field => field.key === rule.field && filterOperators(field).some(operator => operator.value === rule.operator))).slice(0,20) : [];
+  return { view: value?.view === 'kanban' ? 'kanban' : 'list', groupBy: grouped.some((field) => field.key === value?.groupBy) ? value!.groupBy! : grouped.find(field=>field.key===def.groupBy)?.key||grouped[0]?.key||'', listGroupBy: grouped.some(field => field.key === value?.listGroupBy) ? value!.listGroupBy! : '', filters, filterMode: value?.filterMode === 'any' ? 'any' : 'all', visibleKeys: [...new Set([...visible,...newVisible])], columnOrder, knownKeys: keys, sortKey: keys.includes(value?.sortKey || '') ? value!.sortKey! : keys[0], ascending: value?.ascending !== false, filter: bindingKey ? 'All' : value?.filter || (table === 'opportunities' ? 'Open' : 'All'), eventId:bindingKey==='event_id'?'':typeof value?.eventId==='string'?value.eventId:'', layoutVersion: LAYOUT_VERSION };
 }
 
 export function proportionalPlan(total: number, start: string, end: string) {
